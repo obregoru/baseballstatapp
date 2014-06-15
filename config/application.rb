@@ -60,5 +60,7 @@ module Tdd1
     config.assets.version = '1.0'
     config.autoload_paths += %W(#{config.root}/lib)
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
+    #heroku
+    initialize_on_precompile = false
   end
 end

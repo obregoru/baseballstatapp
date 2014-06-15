@@ -15,28 +15,11 @@
 .top_banner {
 background-color:#4181AB;
 }
-.defaultText { padding:10px;font-size:15px;width:100%;  
-	-moz-border-radius: 5px;
- border-radius: 5px;
-    border:solid 1px ;
-    padding:5px;
-}
-.defaultTextActive, .textareashorterActive { color: #a1a1a1; font-style: italic; -moz-border-radius: 5px;
- border-radius: 5px;
-    border:solid 1px ;
-    padding:5px;}
+
 .the_content{
     clear:both;		
     margin:10px;
 	}
-ul
-{
-    list-style-type: none;
-	 margin-left:0px;
-	 padding-left:0px
-
-}
-li {padding-top:5px;padding-left:0px;margin-left:0px;}
 
 img {
   max-width: 100%;
@@ -54,10 +37,6 @@ max-width:960px;
 }
 
 
-.content_img
-{
-	max-width:100%;
-}
 
 @media screen and (max-width: 1920px) {
 
@@ -417,19 +396,10 @@ font: 100%/1.5 Cambria, Georgia, serif;
 		}
 		
 
-#wrapperx {
-  	bottom: 50%;  	
-	right: 50%;  	
-	position:  	
-	absolute;
-	top:0px;
-
-}
 .container
 {  	
 	left: 25px;  	
 	right: 25px;
---	position: relative;  	
 	top: 15px;
 padding: 10px;
 
@@ -469,15 +439,7 @@ a		{
 		}
 	
 
-ul           
-	{
-	
-	list-style-image:url('bullet.gif'); 
-	line-height: 18px; 
-	word-spacing: 0px; 
-	text-align: left; 
-	text-indent: 0;
-	}
+
 
 
 a:hover	{
@@ -500,5 +462,4 @@ table, td, th { vertical-align: middle; border: none; text-align: left; padding-
 
 th { border-bottom: 1px solid #DDD; }
 
-// Custom Styles //
 
