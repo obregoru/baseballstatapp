@@ -58358,3 +58358,79 @@ Migrating to CreatePhotos (20140608033655)
   [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140608033655')
   [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/leagues/" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Processing by LeaguesController#index as HTML
+  [1m[36mLeague Load (0.5ms)[0m  [1mSELECT "leagues".* FROM "leagues" [0m
+  Rendered leagues/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 196ms (Views: 130.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /players.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/batting_stats.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /batting_stats.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/leagues.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /leagues.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/photos.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /photos.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/teams.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /teams.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/testdbs.css?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /testdbs.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:08 -0500
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/batting_stats.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /batting_stats.js - 304 Not Modified (39ms)
+
+
+Started GET "/assets/leagues.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /leagues.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/photos.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /photos.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /players.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/teams.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /teams.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/testdbs.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /testdbs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-14 21:46:09 -0500
+Served asset /application.js - 304 Not Modified (12ms)
