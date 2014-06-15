@@ -367,8 +367,6 @@ height: 2px;
 body
 		{
 			font: 100%/1.5 Cambria, Georgia, serif;
-		#ffont-family: arial, sans-serif;
-		#ffont-size: 14px;
 		line-height: 14px;
 		background-image:url('/images/bg.gif');
 		margin-top: 5px;
