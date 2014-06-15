@@ -1,25 +1,26 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: decqbm3cr1dr9b
+  database: d913ub3nlbacb7
   pool: 5
-  username: nhmnnsoswohewc
-  password:
+  username: igzlqlmgzoqmju
+  password: ZJ12Bcfe6P7e7vYkGwQnWV1XlG
+
 
 # Warning:   
 test: 
   adapter: postgresql
   encoding: unicode
-  database: decqbm3cr1dr9b
+  database: d913ub3nlbacb7
   pool: 5
-  username: nhmnnsoswohewc
-  password:
+  username: igzlqlmgzoqmju
+  password: ZJ12Bcfe6P7e7vYkGwQnWV1XlG
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: decqbm3cr1dr9b
+  database: d913ub3nlbacb7
   pool: 5
-  username: nhmnnsoswohewc
-  password:
+  username: igzlqlmgzoqmju
+  password: ZJ12Bcfe6P7e7vYkGwQnWV1XlG
 

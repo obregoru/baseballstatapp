@@ -154,4 +154,17 @@ then rake db:test:load
 test unit
 http://guides.rubyonrails.org/v3.2.13/testing.html
 
+createuser igzlqlmgzoqmju
+pwd ZJ12Bcfe6P7e7vYkGwQnWV1XlG
+createdb -Oigzlqlmgzoqmju -Eutf8 d913ub3nlbacb7
+
+
+Host 	ec2-54-197-250-52.compute-1.amazonaws.com
+Database 	d913ub3nlbacb7
+User 	igzlqlmgzoqmju
+Port 	5432
+Password 	Hide ZJ12Bcfe6P7e7vYkGwQnWV1XlG
+Psql 	heroku pg:psql --app baseballstatsapp pink
+URL 	Hide postgres://igzlqlmgzoqmju:ZJ12Bcfe6P7e7vYkGwQnWV1XlG@ec2-54-197-250-52.compute-1.amazonaws.com:5432/d913ub3nlbacb7
+
 
