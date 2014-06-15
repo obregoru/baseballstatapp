@@ -7,18 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="wrapper">
+<div class="top_banner">
+<%= image_tag 'logo-tdd.png'%>
+</div>
+
+<div>
+<div class="site_description">
 <h1>Test Driven Development Example</h1>
-<p style="width:40%">This app is intended to show TDD techniques <i>only</i> - it's not intended to showcase the user interface, security (there is not authentication or authorization in this app), jQuery, JavaScript or CSS. 
+<b>This app is <i>only</i> intended to show the results of TDD techniques .</b>
+
+<p>It's not intended to showcase the user interface, security, jQuery, JavaScript or CSS. </p>
+
+<h2>Test First, Code Later.
+
+<p>The purpose of the site is to demonstrate my TDD skills - this site was developed using the "test first, code later" concept.<p>
 	
-The app <i>does</i> include polymorphic associations but they are there for TDD purposes.
-	
-As time goes on I will build it up to include those aspects, but for now it's a barebones app used to showcase TDD.</p>
+<p>It was developed the site using test-Unit, shoulda, Mocha, and RSpec.</p> <p>I could have developed it in Rails 4 and Ruby 2, but in light of the large amount of code in older versions, I decided to use Rails 3.2.13 and Ruby 1.9.3.</p>
+</div>
+<div class = "right_image" >
+<%= image_tag 'baseballlogo.gif'%>
+</div>
+</div>
+<div class="the_content">
 <%= link_to "Leagues", leagues_path %><br/>
 <%= link_to "Teams", teams_path %><br/>
 <%= link_to "Players", players_path %></br>
 <%= link_to "Batting Stats", batting_stats_path %></br>
 <%= link_to "Photos", photos_path%>
 <%= yield %>
-
+</div>
+</div>
 </body>
 </html>
