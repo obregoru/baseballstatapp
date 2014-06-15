@@ -1,0 +1,4910 @@
+events: process_time
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#===
+0 36
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#==
+calls=45 55
+55 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscriber#matches?
+54 59
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#===
+calls=45 56
+56 36
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=45 56
+56 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#reject!
+0 81
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscriber#matches?
+calls=45 20
+20 95
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#unsubscribe
+19 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#reject!
+calls=2 20
+20 176
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#clear
+calls=2 21
+21 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications.rb
+fn=<Module::ActiveSupport::Notifications>#unsubscribe
+142 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#unsubscribe
+calls=2 143
+143 180
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#clear
+calls=2 144
+144 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_controller/test_case.rb
+fn=ActionController::TemplateAssertions#teardown_subscriptions
+40 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications.rb
+cfn=<Module::ActiveSupport::Notifications>#unsubscribe
+calls=2 42
+42 183
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#keys
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#release
+298 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 299
+299 20
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/<internal:prelude>
+fn=Mutex#synchronize
+7 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#lock
+calls=1 8
+8 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#shift
+calls=1 85
+85 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#unlock
+calls=1 12
+12 0
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/thread.rb
+fn=ConditionVariable#signal
+83 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/<internal:prelude>
+cfn=Mutex#synchronize
+calls=1 85
+85 6
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+fn=MonitorMixin::ConditionVariable#signal
+138 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 139
+139 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/thread.rb
+cfn=ConditionVariable#signal
+calls=1 140
+140 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#expire
+86 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#_run__1371162033119361340__checkin__109291186151795893__callbacks
+401 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=2 404
+404 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#expire
+calls=1 288
+288 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin::ConditionVariable#signal
+calls=1 289
+289 14
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#_run_checkin_callbacks
+384 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 385
+385 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__run_callback
+calls=1 385
+385 45
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkin
+285 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 286
+286 100
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#release_connection
+118 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 119
+119 20
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkin
+calls=1 120
+120 101
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#each_value
+0 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#current_connection_id
+calls=1 387
+387 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#release_connection
+calls=1 387
+387 124
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionHandler#clear_active_connections!
+386 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each_value
+calls=1 387
+387 131
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+fn=<Class::ActiveRecord::Base>#clear_active_connections!
+183 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+cfn=<Class::ActiveRecord::Base>#clear_active_connections!
+calls=1 184
+184 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionHandler#clear_active_connections!
+calls=1 184
+184 133
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#decrement_open_transactions
+238 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#rollback_db_transaction
+708 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#execute
+calls=1 709
+709 60
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+fn=ActiveRecord::TestFixtures#teardown_fixtures
+869 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#configurations
+calls=1 870
+870 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#blank?
+calls=1 870
+870 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#run_in_transaction?
+calls=2 877
+877 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 878
+878 62
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#clear
+calls=1 884
+884 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+cfn=<Class::ActiveRecord::Base>#clear_active_connections!
+calls=1 886
+886 134
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=BrowsingTest#_run__1872042160307382491__teardown__1671519186112314292__callbacks
+401 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=2 412
+412 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#teardown_fixtures
+calls=1 405
+405 212
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_controller/test_case.rb
+cfn=ActionController::TemplateAssertions#teardown_subscriptions
+calls=1 409
+409 185
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#hash
+0 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#hash
+calls=2 414
+414 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveSupport::TestCase#_run_teardown_callbacks
+384 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 385
+385 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__run_callback
+calls=1 385
+385 424
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/test-unit-2.5.5/lib/test/unit/testcase.rb
+fn=Test::Unit::TestCase#teardown
+581 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#instance_variable_set
+0 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Runner#copy_session_variables!
+357 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#integration_session
+calls=1 358
+358 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 359
+359 19
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#to_sym
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/cache.rb
+fn=ActionDispatch::Http::Cache::Response#prepare_cache_control!
+74 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+cfn=ActionDispatch::Response#[]
+calls=2 78
+78 15
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 79
+79 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 79
+79 20
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+fn=<Class::ActionDispatch::Response>#default_charset
+40 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/mime_type.rb
+fn=<Class::Mime::Type>#lookup
+87 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+fn=ActionDispatch::Response#[]
+42 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]
+calls=1 43
+43 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]
+calls=2 43
+43 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils#status_code
+553 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 554
+554 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Integer#to_i
+calls=1 557
+557 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+fn=ActionDispatch::Response#status=
+82 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils#status_code
+calls=1 83
+83 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+fn=ActionDispatch::Response#body=
+121 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 127
+127 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+fn=ActionDispatch::Response#initialize
+65 20
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+cfn=ActionDispatch::Response#body=
+calls=1 66
+66 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+cfn=ActionDispatch::Response#status=
+calls=1 66
+66 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+cfn=ActionDispatch::Response#[]
+calls=1 71
+71 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 72
+72 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/mime_type.rb
+cfn=<Class::Mime::Type>#lookup
+calls=1 73
+73 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 74
+74 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActionDispatch::Response>#default_charset
+calls=1 74
+74 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/cache.rb
+cfn=ActionDispatch::Http::Cache::Response#prepare_cache_control!
+calls=1 77
+77 48
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=1 79
+79 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+fn=Rack::MockResponse#body
+172 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#join
+calls=1 183
+183 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+fn=Rack::MockSession#last_request
+48 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/forwardable.rb
+fn=Rack::Test::Session#last_request
+199 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#last_request
+calls=2 201
+201 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/forwardable.rb
+fn=Rack::Test::Session#last_response
+199 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#last_response
+calls=1 201
+201 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#last_response
+calls=1 201
+201 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#retry_with_digest_auth?
+263 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/forwardable.rb
+cfn=Rack::Test::Session#last_response
+calls=1 265
+265 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/body_proxy.rb
+fn=Rack::BodyProxy#initialize
+3 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+fn=Rack::Response#finish
+71 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Integer#to_i
+calls=2 80
+80 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=1 74
+74 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 80
+80 10
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+fn=Rack::Test::CookieJar#merge
+124 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+fn=Rack::MockSession#last_response
+55 12
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=IO#close
+0 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Proc#call
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#bytesize
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils#bytesize
+286 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#bytesize
+calls=1 287
+287 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+fn=Rack::Response#write
+96 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=1 97
+97 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils#bytesize
+calls=1 98
+98 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Proc#call
+calls=1 99
+99 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=1 101
+101 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]=
+calls=1 101
+101 12
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=IO#read
+0 16
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Enumerable#min
+0 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 121
+121 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Range#end
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=IO#seek
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Range#begin
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=File#initialize
+0 26
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::IO>#allocate
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::IO>#open
+0 15
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::IO>#allocate
+calls=1 117
+117 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=File#initialize
+calls=1 117
+117 26
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Range#begin
+calls=2 119
+119 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=IO#seek
+calls=1 118
+118 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Range#end
+calls=1 119
+119 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Enumerable#min
+calls=1 121
+121 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=IO#read
+calls=1 121
+121 16
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=1 38
+38 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+cfn=Rack::Response#write
+calls=1 38
+38 33
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=IO#close
+calls=1 38
+38 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+fn=Rack::File#each
+116 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::IO>#open
+calls=1 117
+117 123
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#lambda
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#[]
+0 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils::HeaderHash#[]
+408 18
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]
+calls=2 409
+409 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 409
+409 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]
+calls=2 409
+409 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 409
+409 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]
+calls=1 409
+409 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]
+calls=3 409
+409 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 409
+409 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils::HeaderHash#merge!
+434 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each
+calls=1 435
+435 47
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils::HeaderHash#merge
+439 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 440
+440 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#merge!
+calls=1 441
+441 50
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils::HeaderHash#[]=
+412 38
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 413
+413 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=3 416
+416 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=4 413
+413 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=12 416
+416 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 413
+413 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=3 416
+416 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils::HeaderHash#initialize
+390 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize
+calls=1 391
+391 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each
+calls=1 393
+393 17
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=<Class::Rack::Utils::HeaderHash>#new
+386 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#===
+calls=1 387
+387 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 387
+387 30
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+fn=Rack::Response#initialize
+22 23
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Integer#to_i
+calls=1 23
+23 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=<Class::Rack::Utils::HeaderHash>#new
+calls=1 24
+24 36
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#merge
+calls=1 24
+24 66
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]
+calls=1 27
+27 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=1 27
+27 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#lambda
+calls=1 28
+28 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 34
+34 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+cfn=Rack::File#each
+calls=1 37
+37 126
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=1 44
+44 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=StringIO#string
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+fn=Rack::MockResponse#initialize
+156 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 158
+158 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=StringIO#string
+calls=1 158
+158 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+cfn=Rack::Response#initialize
+calls=1 161
+161 276
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=StringIO#flush
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Range>#allocate
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#[]=
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils#byte_ranges
+315 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#size?
+0 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#fetch
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mime.rb
+fn=Rack::Mime#mime_type
+16 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=1 17
+17 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=1 17
+17 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#fetch
+calls=1 17
+17 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#extname
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#sprintf
+0 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#sec
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#min
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#hour
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#year
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#mon
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#day
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#wday
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#divmod
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#<=>
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#utc
+0 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#<=>
+calls=2 498
+498 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#divmod
+calls=1 498
+498 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#initialize_copy
+0 2
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/time.rb
+fn=Time#httpdate
+497 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 498
+498 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#utc
+calls=1 498
+498 16
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#wday
+calls=1 499
+499 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#day
+calls=1 499
+499 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#mon
+calls=1 499
+499 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#year
+calls=2 499
+499 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#hour
+calls=1 499
+499 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#min
+calls=1 499
+499 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#sec
+calls=1 499
+499 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#sprintf
+calls=1 499
+499 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#mtime
+0 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+fn=Rack::File#serving
+72 23
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#mtime
+calls=1 73
+73 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/time.rb
+cfn=Time#httpdate
+calls=1 73
+73 61
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#extname
+calls=1 75
+75 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mime.rb
+cfn=Rack::Mime#mime_type
+calls=1 75
+75 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each
+calls=1 85
+85 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#size?
+calls=1 91
+91 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils#byte_ranges
+calls=1 93
+93 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#nil?
+calls=1 94
+94 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#[]=
+calls=1 97
+97 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Range>#allocate
+calls=1 98
+98 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=1 112
+112 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 112
+112 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#readable?
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#join
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#gsub
+0 7
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=<Module::URI>#decode_www_form_component
+897 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#gsub
+calls=1 899
+899 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#force_encoding
+calls=1 899
+899 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils#unescape
+40 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#decode_www_form_component
+calls=1 41
+41 17
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+fn=Rack::File#_call
+42 16
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=1 43
+43 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils#unescape
+calls=1 47
+47 20
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 48
+48 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 52
+52 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#join
+calls=1 57
+57 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#file?
+calls=1 60
+60 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#readable?
+calls=1 60
+60 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+cfn=Rack::File#serving
+calls=1 66
+66 134
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+fn=Rack::File#call
+36 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 37
+37 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+cfn=Rack::File#_call
+calls=1 37
+37 202
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+fn=ActionDispatch::FileHandler#call
+26 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/file.rb
+cfn=Rack::File#call
+calls=1 27
+27 214
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#gsub!
+0 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#encoding
+0 2
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=<Module::URI>#encode_www_form_component
+880 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=1 881
+881 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#encoding
+calls=1 882
+882 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=1 882
+882 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 885
+885 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#force_encoding
+calls=2 889
+889 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#gsub!
+calls=1 888
+888 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+fn=Rack::Utils#escape
+25 5
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#encode_www_form_component
+calls=1 26
+26 42
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#sub!
+0 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::File>#file?
+0 14
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Enumerable#detect
+0 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 19
+19 15
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Dir>#[]
+0 48
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+fn=ActionDispatch::FileHandler#ext
+30 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#initialize_copy
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::String>#allocate
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+fn=ActionDispatch::FileHandler#match?
+12 16
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 13
+13 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 15
+15 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+cfn=ActionDispatch::FileHandler#ext
+calls=1 16
+16 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Dir>#[]
+calls=1 18
+18 48
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Enumerable#detect
+calls=1 19
+19 18
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#sub!
+calls=1 21
+21 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils#escape
+calls=1 22
+22 47
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#chomp
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+fn=ActionDispatch::Static#call
+53 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#chomp
+calls=1 56
+56 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+cfn=ActionDispatch::FileHandler#match?
+calls=1 57
+57 152
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 58
+58 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+cfn=ActionDispatch::FileHandler#call
+calls=1 59
+59 218
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+fn=Rails::Application#env_config
+169 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+fn=Rails::Engine#app
+467 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+fn=Rails::Engine#call
+478 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+cfn=Rails::Engine#app
+calls=1 479
+479 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+cfn=Rails::Application#env_config
+calls=1 479
+479 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#merge!
+calls=1 479
+479 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb
+cfn=ActionDispatch::Static#call
+calls=1 479
+479 386
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#=~
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/string/encoding.rb
+fn=String#encoding_aware?
+3 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/blank.rb
+fn=String#blank?
+102 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/string/encoding.rb
+cfn=String#encoding_aware?
+calls=1 104
+104 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#!~
+calls=1 105
+105 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/blank.rb
+fn=Object#present?
+20 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/blank.rb
+cfn=String#blank?
+calls=1 21
+21 13
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+fn=Rails::Application#build_original_fullpath
+308 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/blank.rb
+cfn=Object#present?
+calls=1 313
+313 16
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+fn=Rails::Application#call
+221 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+cfn=Rails::Application#build_original_fullpath
+calls=1 222
+222 25
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 222
+222 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+cfn=Rails::Engine#call
+calls=1 223
+223 405
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/request.rb
+fn=Rack::Request#initialize
+20 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+fn=Rack::Test::CookieJar#hash_for
+164 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 172
+172 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+fn=Rack::Test::CookieJar#for
+148 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+cfn=Rack::Test::CookieJar#hash_for
+calls=1 149
+149 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#values
+calls=1 149
+149 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#map
+calls=1 149
+149 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#join
+calls=1 149
+149 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+fn=Rack::MockSession#cookie_jar
+60 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+fn=Rack::MockSession#request
+27 21
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#cookie_jar
+calls=2 35
+35 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+cfn=Rack::Test::CookieJar#for
+calls=1 28
+28 15
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 28
+28 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=2 32
+32 302
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/application.rb
+cfn=Rails::Application#call
+calls=1 30
+30 436
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=StringIO#flush
+calls=1 32
+32 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 39
+39 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#last_response
+calls=1 35
+35 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]
+calls=1 35
+35 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test/cookie_jar.rb
+cfn=Rack::Test::CookieJar#merge
+calls=1 35
+35 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 37
+37 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/response.rb
+cfn=Rack::Response#finish
+calls=1 40
+40 26
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#process_request
+226 12
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#parse
+calls=1 227
+227 108
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#request
+calls=1 230
+230 831
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#retry_with_digest_auth?
+calls=1 232
+232 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=1 240
+240 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/forwardable.rb
+cfn=Rack::Test::Session#last_response
+calls=1 242
+242 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=StringIO#length
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=StringIO#set_encoding
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#force_encoding
+0 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=StringIO#initialize
+0 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#initialize
+calls=2 127
+127 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::StringIO>#allocate
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=NilClass#to_s
+0 2
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=Kernel#URI
+990 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 991
+991 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::String>#try_convert
+calls=1 993
+993 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#parse
+calls=1 994
+994 107
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+fn=<Class::Rack::MockRequest>#env_for
+80 52
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=Kernel#URI
+calls=1 81
+81 116
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#[]
+calls=1 82
+82 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 84
+84 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 86
+86 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#upcase
+calls=1 86
+86 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=12 135
+135 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=2 135
+135 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#to_s
+calls=1 89
+89 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 90
+90 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=2 127
+127 18
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 132
+132 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#force_encoding
+calls=1 124
+124 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#===
+calls=1 126
+126 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=StringIO#set_encoding
+calls=1 132
+132 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=StringIO#length
+calls=1 135
+135 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each
+calls=1 137
+137 48
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#has_key?
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#delete
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Module#===
+0 12
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#each
+0 48
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#===
+calls=13 138
+138 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=11 138
+138 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 85
+85 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]=
+calls=1 393
+393 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#[]=
+calls=4 435
+435 39
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#headers_for_env
+277 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#each
+calls=1 280
+280 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#default_env
+273 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#headers_for_env
+calls=1 274
+274 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#merge
+calls=1 274
+274 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#[]
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#freeze
+0 5
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/http.rb
+fn=URI::HTTP#initialize
+83 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#initialize
+calls=1 84
+84 68
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#initialize
+calls=1 84
+84 64
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#initialize
+calls=1 84
+84 64
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#include?
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#upcase
+0 11
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=<Module::URI>#scheme_list
+659 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#env_for
+178 25
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#parse
+calls=1 179
+179 119
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#[]
+calls=1 180
+180 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#default_env
+calls=1 183
+183 22
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#merge
+calls=1 183
+183 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#===
+calls=1 187
+187 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 192
+192 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#upcase
+calls=1 192
+192 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 192
+192 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#delete
+calls=1 217
+217 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#has_key?
+calls=1 219
+219 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#to_s
+calls=1 223
+223 27
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+cfn=<Class::Rack::MockRequest>#env_for
+calls=1 223
+223 286
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#request
+121 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#env_for
+calls=1 122
+122 505
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#process_request
+calls=1 123
+123 970
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#path_query
+1441 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=BasicObject#==
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#==
+0 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#==
+calls=1 1477
+1477 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=BasicObject#!=
+0 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#==
+calls=1 1477
+1477 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#to_s
+1453 35
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#userinfo
+calls=1 1470
+1470 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 1477
+1477 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#!=
+calls=1 1477
+1477 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=1 1479
+1479 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#path_query
+calls=1 1483
+1483 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#userinfo
+calls=1 1470
+1470 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 1477
+1477 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#path_query
+calls=1 1483
+1483 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#join
+0 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#delete
+0 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=1 1109
+1109 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#shift
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#clear
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#index
+0 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=2 1097
+1097 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#last
+0 5
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#split_path
+1079 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=2 1080
+1080 9
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#merge_path
+1088 31
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_path
+calls=2 1093
+1093 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#last
+calls=3 1108
+1108 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#index
+calls=1 1097
+1097 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#first
+calls=1 1101
+1101 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 1101
+1101 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#clear
+calls=1 1102
+1102 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#shift
+calls=2 1128
+1128 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#delete
+calls=1 1109
+1109 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=2 1140
+1140 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#empty?
+calls=2 1123
+1123 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#join
+calls=1 1147
+1147 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#empty?
+0 12
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#nil?
+0 11
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#==
+0 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=1 1499
+1499 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=NilClass#nil?
+0 11
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#userinfo
+570 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#nil?
+calls=2 571
+571 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#nil?
+calls=2 571
+571 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#nil?
+calls=1 571
+571 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=NilClass#nil?
+calls=1 571
+571 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#collect
+0 25
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#userinfo
+calls=2 1531
+1531 9
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=<Class::URI::Generic>#component
+54 3
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#component
+320 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 321
+321 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#component
+calls=2 321
+321 3
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#component_ary
+1529 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#component
+calls=2 1530
+1530 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#collect
+calls=2 1530
+1530 34
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#downcase
+0 17
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#normalize!
+1428 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#downcase
+calls=2 1435
+1435 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#normalize
+1419 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=2 1420
+1420 13
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#normalize!
+calls=2 1421
+1421 14
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#==
+1497 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 1498
+1498 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#normalize
+calls=2 1499
+1499 39
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#component_ary
+calls=2 1499
+1499 51
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#==
+calls=1 1499
+1499 17
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#initialize_copy
+0 5
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#absolute?
+1060 13
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#relative?
+1072 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#absolute?
+calls=1 1073
+1073 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::String>#try_convert
+0 3
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=URI::Parser#convert_to_uri
+531 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 532
+532 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::String>#try_convert
+calls=1 534
+534 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#parse
+calls=1 535
+535 126
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#merge0
+1241 15
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#parser
+calls=1 1242
+1242 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#convert_to_uri
+calls=1 1242
+1242 137
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#relative?
+calls=1 1244
+1244 10
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#absolute?
+calls=3 1256
+1256 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 1257
+1257 15
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#merge
+1198 29
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#merge0
+calls=1 1200
+1200 189
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#==
+calls=1 1205
+1205 122
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#userinfo
+calls=2 1229
+1229 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#nil?
+calls=1 1212
+1212 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 1212
+1212 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 1217
+1217 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 1218
+1218 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#merge_path
+calls=1 1222
+1222 86
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 1222
+1222 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#kind_of?
+0 9
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#check_port
+689 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#kind_of?
+calls=1 692
+692 3
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#port=
+743 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#check_port
+calls=1 744
+744 8
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=1 745
+745 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#to_i
+0 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#empty?
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/try.rb
+fn=Object#try
+32 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#empty?
+calls=1 33
+33 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_i
+calls=1 36
+36 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#check_host
+597 5
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#parser
+calls=1 600
+600 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#!~
+calls=1 600
+600 5
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#host=
+644 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#check_host
+calls=1 645
+645 13
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 646
+646 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Regexp#=~
+0 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#!~
+0 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#=~
+calls=1 328
+328 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#=~
+calls=1 603
+603 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#=~
+calls=1 105
+105 4
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#parser
+297 9
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#check_scheme
+327 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#parser
+calls=1 328
+328 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#!~
+calls=1 328
+328 7
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#scheme=
+369 8
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#check_scheme
+calls=1 370
+370 16
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 371
+371 1
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=<Class::URI::Generic>#default_port
+29 16
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#default_port
+36 27
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 37
+37 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=2 37
+37 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 37
+37 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=<Class::URI::Generic>#default_port
+calls=1 37
+37 1
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_fragment
+1012 12
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_registry
+778 11
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_opaque
+969 10
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_query
+906 10
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_path
+841 13
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_port
+708 30
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#kind_of?
+calls=1 709
+709 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#kind_of?
+calls=1 709
+709 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 710
+710 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_i
+calls=1 713
+713 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#kind_of?
+calls=1 709
+709 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#kind_of?
+calls=1 709
+709 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=1 710
+710 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_i
+calls=1 713
+713 1
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_host
+616 14
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#split_userinfo
+555 10
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_userinfo
+522 28
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_userinfo
+calls=1 524
+524 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_userinfo
+calls=1 524
+524 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_userinfo
+calls=1 524
+524 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_userinfo
+calls=1 524
+524 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#split_userinfo
+calls=1 524
+524 2
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#set_scheme
+341 9
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+fn=URI::Generic#initialize
+172 163
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 202
+202 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_userinfo
+calls=1 203
+203 9
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 204
+204 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=1 205
+205 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 206
+206 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 207
+207 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_opaque
+calls=1 208
+208 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_registry
+calls=1 209
+209 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 210
+210 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 219
+219 10
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 202
+202 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_userinfo
+calls=1 203
+203 9
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 204
+204 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=1 205
+205 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 206
+206 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 207
+207 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_opaque
+calls=1 208
+208 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_registry
+calls=1 209
+209 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 210
+210 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 219
+219 10
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 202
+202 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_userinfo
+calls=1 203
+203 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 204
+204 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=1 205
+205 11
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 206
+206 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 207
+207 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_opaque
+calls=1 208
+208 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_registry
+calls=1 209
+209 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 210
+210 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#freeze
+calls=1 217
+217 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 219
+219 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 202
+202 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_userinfo
+calls=1 203
+203 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 204
+204 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=2 219
+219 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 206
+206 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 207
+207 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_opaque
+calls=1 208
+208 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_registry
+calls=1 209
+209 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 210
+210 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#freeze
+calls=1 217
+217 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=2 219
+219 10
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_scheme
+calls=1 202
+202 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_userinfo
+calls=1 203
+203 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_host
+calls=1 204
+204 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_port
+calls=1 205
+205 11
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_path
+calls=1 206
+206 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_query
+calls=1 207
+207 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_opaque
+calls=1 208
+208 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_registry
+calls=1 209
+209 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#set_fragment
+calls=1 210
+210 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#freeze
+calls=1 217
+217 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#default_port
+calls=1 219
+219 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=MatchData#[]
+0 20
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Regexp#===
+0 30
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=URI::Parser#split
+120 59
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=1 121
+121 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#===
+calls=2 121
+121 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=MatchData#[]
+calls=1 155
+155 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=1 121
+121 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#===
+calls=2 121
+121 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=MatchData#[]
+calls=1 155
+155 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=1 121
+121 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#===
+calls=1 121
+121 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=MatchData#[]
+calls=1 127
+127 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=1 121
+121 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#===
+calls=1 121
+121 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=MatchData#[]
+calls=1 127
+127 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=1 121
+121 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Regexp#===
+calls=1 121
+121 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=MatchData#[]
+calls=1 127
+127 3
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=URI::Parser#parse
+209 42
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#split
+calls=1 211
+211 28
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 218
+218 78
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#split
+calls=1 211
+211 30
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 218
+218 91
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#split
+calls=1 211
+211 21
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#scheme_list
+calls=2 214
+214 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#upcase
+calls=2 214
+214 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#include?
+calls=1 213
+213 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 214
+214 77
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#split
+calls=1 211
+211 18
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#scheme_list
+calls=2 214
+214 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#upcase
+calls=2 214
+214 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#include?
+calls=1 213
+213 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 214
+214 72
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#split
+calls=1 211
+211 19
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#scheme_list
+calls=2 214
+214 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#upcase
+calls=2 214
+214 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#include?
+calls=1 213
+213 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 214
+214 70
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+fn=<Module::URI>#parse
+746 8
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#parse
+calls=1 747
+747 114
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#parse
+calls=1 747
+747 117
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#parse
+calls=1 747
+747 104
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=URI::Parser#parse
+calls=1 747
+747 107
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#merge!
+0 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+fn=Rack::Test::Session#initialize
+36 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 39
+39 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Session#_mock_session
+249 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Session#https?
+239 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Session#host
+141 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Module#<
+0 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Session#process
+254 66
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#<
+calls=1 263
+263 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Session#host
+calls=2 276
+276 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 269
+269 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Session#https?
+calls=3 276
+276 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Session#_mock_session
+calls=2 303
+303 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=3 304
+304 134
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#merge!
+calls=1 289
+289 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/common.rb
+cfn=<Module::URI>#parse
+calls=1 293
+293 116
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#scheme=
+calls=1 294
+294 25
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#host=
+calls=1 295
+295 20
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/try.rb
+cfn=Object#try
+calls=1 296
+296 12
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#port=
+calls=1 296
+296 21
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#merge
+calls=1 297
+297 454
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#to_s
+calls=1 299
+299 45
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#request
+calls=1 299
+299 1480
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/forwardable.rb
+cfn=Rack::Test::Session#last_request
+calls=2 308
+308 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/mock_session.rb
+cfn=Rack::MockSession#last_response
+calls=1 303
+303 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+cfn=Rack::MockResponse#body
+calls=1 304
+304 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::RequestHelpers#get
+32 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Session#process
+calls=1 33
+33 2421
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#==
+0 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 1499
+1499 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 27
+27 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/inclusion.rb
+fn=Object#in?
+13 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#first
+calls=1 17
+17 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 18
+18 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=1 19
+19 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/test/performance/browsing_test.rb
+fn=BrowsingTest#test_homepage
+9 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/test/performance/browsing_test.rb
+cfn=BrowsingTest#test_homepage
+calls=1 10
+10 2491
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#integration_session
+calls=2 333
+333 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/object/inclusion.rb
+cfn=Object#in?
+calls=1 332
+332 18
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::RequestHelpers#get
+calls=1 333
+333 2428
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#tap
+calls=1 333
+333 30
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance/ruby.rb
+fn=ActiveSupport::Testing::Performance::Metrics::Base#profile
+81 28
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 85
+85 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/test/performance/browsing_test.rb
+cfn=BrowsingTest#test_homepage
+calls=1 105
+105 2494
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/test-unit-2.5.5/lib/test/unit/testcase.rb
+fn=Test::Unit::TestCase#setup
+493 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+fn=Rails::Engine#routes
+488 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=1 490
+490 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails.rb
+fn=<Module::Rails>#application
+36 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/identity_map.rb
+fn=<Module::ActiveRecord::IdentityMap>#repository
+56 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 57
+57 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 57
+57 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/identity_map.rb
+fn=<Module::ActiveRecord::IdentityMap>#clear
+104 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/identity_map.rb
+cfn=<Module::ActiveRecord::IdentityMap>#repository
+calls=1 105
+105 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#clear
+calls=1 105
+105 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+fn=ActiveSupport::TestCase#use_instantiated_fixtures
+97 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 98
+98 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_instantiated_fixtures
+calls=1 98
+98 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/explain_subscriber.rb
+fn=ActiveRecord::ExplainSubscriber#call
+5 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 6
+6 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 6
+6 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 6
+6 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 6
+6 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+fn=ActiveSupport::BufferedLogger#level
+71 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+fn=ActiveSupport::BufferedLogger#debug?
+93 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+cfn=ActiveSupport::BufferedLogger#level
+calls=1 94
+94 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+cfn=ActiveSupport::BufferedLogger#level
+calls=1 94
+94 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb
+fn=ActiveSupport::TaggedLogging#method_missing
+64 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+cfn=ActiveSupport::BufferedLogger#debug?
+calls=1 65
+65 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/buffered_logger.rb
+cfn=ActiveSupport::BufferedLogger#debug?
+calls=1 65
+65 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Thread#[]=
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+fn=<Class::ActiveRecord::LogSubscriber>#runtime=
+3 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 4
+4 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]=
+calls=1 4
+4 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 4
+4 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]=
+calls=1 4
+4 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+fn=<Class::ActiveRecord::LogSubscriber>#runtime
+7 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 8
+8 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 8
+8 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 8
+8 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 8
+8 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+fn=ActiveRecord::LogSubscriber#sql
+21 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 22
+22 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=<Class::ActiveRecord::LogSubscriber>#runtime
+calls=1 22
+22 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=<Class::ActiveRecord::LogSubscriber>#runtime=
+calls=1 22
+22 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#logger
+calls=1 23
+23 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb
+cfn=ActiveSupport::TaggedLogging#method_missing
+calls=1 23
+23 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 22
+22 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=<Class::ActiveRecord::LogSubscriber>#runtime
+calls=1 22
+22 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=<Class::ActiveRecord::LogSubscriber>#runtime=
+calls=1 22
+22 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#logger
+calls=1 23
+23 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb
+cfn=ActiveSupport::TaggedLogging#method_missing
+calls=1 23
+23 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#fdiv
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Rational#to_f
+0 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#fdiv
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#fdiv
+calls=1 322
+322 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Rational#/
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Numeric#quo
+0 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Rational#/
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Rational#/
+calls=1 322
+322 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#-
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#minus_without_duration
+0 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#-
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Numeric#quo
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Rational#to_f
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#-
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Numeric#quo
+calls=1 322
+322 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Rational#to_f
+calls=1 322
+322 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/duration.rb
+fn=<Class::ActiveSupport::Duration>#===
+54 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 55
+55 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 55
+55 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+fn=Time#minus_with_duration
+318 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/duration.rb
+cfn=<Class::ActiveSupport::Duration>#===
+calls=1 319
+319 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#minus_without_duration
+calls=1 322
+322 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/duration.rb
+cfn=<Class::ActiveSupport::Duration>#===
+calls=1 319
+319 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#minus_without_duration
+calls=1 322
+322 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#is_a?
+0 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+fn=Time#minus_with_coercion
+331 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 332
+332 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 333
+333 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_duration
+calls=1 333
+333 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 332
+332 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#is_a?
+calls=1 333
+333 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_duration
+calls=1 333
+333 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#dup
+0 35
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 40
+40 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 40
+40 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 1257
+1257 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 1257
+1257 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=2 1420
+1420 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=2 1420
+1420 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 84
+84 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 84
+84 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::String>#allocate
+calls=1 13
+13 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 13
+13 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::String>#allocate
+calls=1 885
+885 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 885
+885 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 37
+37 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 37
+37 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=1 498
+498 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 498
+498 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 440
+440 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 440
+440 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 40
+40 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 40
+40 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Event#initialize
+38 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 40
+40 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_coercion
+calls=1 44
+44 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#dup
+calls=1 40
+40 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/time/calculations.rb
+cfn=Time#minus_with_coercion
+calls=1 44
+44 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#first
+0 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#split
+0 31
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+fn=<Class::ActiveRecord::Base>#logger
+40 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+fn=ActiveRecord::LogSubscriber#logger
+66 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#logger
+calls=1 67
+67 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#logger
+calls=1 67
+67 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#logger
+calls=1 67
+67 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#logger
+calls=1 67
+67 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/log_subscriber.rb
+fn=ActiveSupport::LogSubscriber#call
+88 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#logger
+calls=1 89
+89 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 91
+91 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#first
+calls=1 91
+91 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 93
+93 24
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#sql
+calls=1 93
+93 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#logger
+calls=1 89
+89 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=1 91
+91 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#first
+calls=1 91
+91 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=1 93
+93 21
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/log_subscriber.rb
+cfn=ActiveRecord::LogSubscriber#sql
+calls=1 93
+93 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscriber#publish
+46 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/log_subscriber.rb
+cfn=ActiveSupport::LogSubscriber#call
+calls=1 47
+47 47
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/explain_subscriber.rb
+cfn=ActiveRecord::ExplainSubscriber#call
+calls=1 47
+47 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/log_subscriber.rb
+cfn=ActiveSupport::LogSubscriber#call
+calls=1 47
+47 36
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/explain_subscriber.rb
+cfn=ActiveRecord::ExplainSubscriber#call
+calls=1 47
+47 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#===
+0 7
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscriber#subscribed_to?
+50 25
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=23 51
+51 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#===
+calls=23 51
+51 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#select
+0 34
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscriber#subscribed_to?
+calls=23 29
+29 25
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#listeners_for
+28 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#select
+calls=1 29
+29 59
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 29
+29 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#publish
+24 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=1 25
+25 60
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 25
+25 52
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#listeners_for
+calls=1 25
+25 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 25
+25 41
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=PG::Connection#async_exec
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+fn=ActiveSupport::Notifications::Instrumenter#instrument
+16 23
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#now
+calls=2 25
+25 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=PG::Connection#async_exec
+calls=1 650
+650 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#publish
+calls=1 25
+25 112
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#now
+calls=2 25
+25 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=PG::Connection#async_exec
+calls=1 650
+650 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#publish
+calls=1 25
+25 42
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#object_id
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#log
+274 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#object_id
+calls=1 275
+275 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Instrumenter#instrument
+calls=1 275
+275 131
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#object_id
+calls=1 275
+275 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Instrumenter#instrument
+calls=1 275
+275 56
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#execute
+648 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#log
+calls=1 649
+649 135
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#log
+calls=1 649
+649 58
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#begin_db_transaction
+698 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#execute
+calls=1 699
+699 135
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#transaction_joinable=
+242 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#increment_open_transactions
+234 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#[]=
+0 57
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=PG::Connection#query
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#active?
+341 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=PG::Connection#query
+calls=1 342
+342 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!
+218 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#active?
+calls=1 219
+219 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#block_given?
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#_run__1371162033119361340__checkout__109291186151795893__callbacks
+401 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=2 404
+404 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#verify!
+calls=1 333
+333 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#_run_checkout_callbacks
+384 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 385
+385 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__run_callback
+calls=1 385
+385 26
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkout_and_verify
+331 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks#run_callbacks
+calls=1 332
+332 34
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Mutex#unlock
+0 0
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_check_owner
+244 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 245
+245 0
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_exit
+194 28
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#unlock
+calls=1 199
+199 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#unlock
+calls=1 199
+199 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#unlock
+calls=1 199
+199 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_check_owner
+calls=1 195
+195 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#unlock
+calls=1 199
+199 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#+
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Time#initialize
+0 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#+
+calls=1 81
+81 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#+
+calls=2 25
+25 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#+
+calls=2 25
+25 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Time>#allocate
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Time>#now
+0 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=1 81
+81 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#initialize
+calls=1 81
+81 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=2 25
+25 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#initialize
+calls=2 25
+25 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#allocate
+calls=2 25
+25 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#initialize
+calls=2 25
+25 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+fn=ActiveRecord::ConnectionAdapters::AbstractAdapter#lease
+77 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 78
+78 24
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#each
+0 52
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#lease
+calls=1 243
+243 25
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#increment_open_transactions
+calls=1 854
+854 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#transaction_joinable=
+calls=1 855
+855 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#begin_db_transaction
+calls=1 856
+856 136
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscriber#publish
+calls=2 25
+25 50
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::File>#file?
+calls=2 19
+19 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#empty?
+calls=2 53
+53 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#<=>
+calls=1 121
+121 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#split
+calls=2 80
+80 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_sym
+calls=2 81
+81 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=2 81
+81 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#instance_variable_set
+calls=3 360
+360 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/postgresql_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#rollback_db_transaction
+calls=1 880
+880 60
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract_adapter.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#decrement_open_transactions
+calls=1 881
+881 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscriber#publish
+calls=2 25
+25 36
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Enumerable#find
+0 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 243
+243 25
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 305
+305 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#loop
+0 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Enumerable#find
+calls=1 243
+243 27
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkout_and_verify
+calls=1 253
+253 35
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkout
+238 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 239
+239 85
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Thread#[]
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+fn=<Class::ActiveRecord::Base>#connection_id
+148 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 149
+149 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 149
+149 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 149
+149 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 149
+149 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 149
+149 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Thread#[]
+calls=1 149
+149 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#current_connection_id
+318 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+cfn=<Class::ActiveRecord::Base>#connection_id
+calls=1 319
+319 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+cfn=<Class::ActiveRecord::Base>#connection_id
+calls=1 319
+319 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_specification.rb
+cfn=<Class::ActiveRecord::Base>#connection_id
+calls=1 319
+319 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Mutex#lock
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Thread>#current
+0 0
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_enter
+183 31
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=2 186
+186 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#lock
+calls=1 185
+185 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 184
+184 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=2 186
+186 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#lock
+calls=1 185
+185 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=2 186
+186 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#lock
+calls=1 185
+185 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=2 186
+186 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Mutex#lock
+calls=1 185
+185 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Thread>#current
+calls=1 184
+184 0
+
+fl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+fn=MonitorMixin#mon_synchronize
+208 26
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#current_connection_id
+calls=1 102
+102 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#checkout
+calls=1 102
+102 85
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#[]=
+calls=1 102
+102 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 8
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#loop
+calls=1 242
+242 68
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 4
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Time>#now
+calls=1 81
+81 3
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 6
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#delete
+calls=1 119
+119 0
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 7
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks#run_callbacks
+calls=1 287
+287 54
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#release
+calls=1 292
+292 20
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 5
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_enter
+calls=1 209
+209 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#current_connection_id
+calls=1 302
+302 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#keys
+calls=1 305
+305 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Enumerable#find
+calls=1 305
+305 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_exit
+calls=1 213
+213 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+fn=ActiveRecord::ConnectionAdapters::ConnectionPool#connection
+100 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/monitor.rb
+cfn=MonitorMixin#mon_synchronize
+calls=1 101
+101 111
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#map
+0 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb
+cfn=ActiveRecord::ConnectionAdapters::ConnectionPool#connection
+calls=1 890
+890 113
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Symbol#to_proc
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#values
+0 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+fn=ActiveRecord::TestFixtures#enlist_fixture_connections
+889 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#enlist_fixture_connections
+calls=1 890
+890 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#values
+calls=1 890
+890 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_proc
+calls=1 890
+890 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#map
+calls=1 890
+890 114
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Array#include?
+0 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=2 19
+19 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#==
+calls=5 882
+882 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#==
+calls=1 43
+43 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#==
+calls=3 74
+74 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#to_s
+0 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+fn=ActiveRecord::TestFixtures::ClassMethods#uses_transaction?
+822 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=1 824
+824 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=1 824
+824 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#to_s
+calls=2 824
+824 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#include?
+calls=2 824
+824 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+fn=ActiveSupport::TestCase#use_transactional_fixtures
+97 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 98
+98 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_transactional_fixtures
+calls=1 98
+98 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 98
+98 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_transactional_fixtures
+calls=2 98
+98 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+fn=ActiveRecord::TestFixtures#run_in_transaction?
+828 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_transactional_fixtures
+calls=1 830
+830 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 830
+830 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures::ClassMethods#uses_transaction?
+calls=1 830
+830 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_transactional_fixtures
+calls=2 830
+830 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 830
+830 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures::ClassMethods#uses_transaction?
+calls=2 830
+830 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+fn=ActiveSupport::TestCase#pre_loaded_fixtures
+97 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 98
+98 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#pre_loaded_fixtures
+calls=1 98
+98 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#blank?
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+fn=<Class::ActiveRecord::Base>#configurations
+40 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+fn=ActiveRecord::TestFixtures#setup_fixtures
+833 39
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute_accessors.rb
+cfn=<Class::ActiveRecord::Base>#configurations
+calls=1 834
+834 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#blank?
+calls=1 834
+834 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#pre_loaded_fixtures
+calls=1 836
+836 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#run_in_transaction?
+calls=1 845
+845 7
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=2 847
+847 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#hash
+calls=2 847
+847 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#enlist_fixture_connections
+calls=1 852
+852 128
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Array#each
+calls=1 853
+853 143
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/attribute.rb
+cfn=ActiveSupport::TestCase#use_instantiated_fixtures
+calls=1 866
+866 3
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#clear
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#tap
+0 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#clear
+calls=2 131
+131 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#copy_session_variables!
+calls=1 334
+334 26
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout::Subscriber#initialize
+41 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::BasicObject>#allocate
+0 23
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+fn=ActiveSupport::Notifications::Fanout#subscribe
+11 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=2 12
+12 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#tap
+calls=2 12
+12 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#clear
+calls=2 15
+15 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=BasicObject#initialize
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Proc>#new
+0 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=BasicObject#initialize
+calls=2 11
+11 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications.rb
+fn=<Module::ActiveSupport::Notifications>#subscribe
+129 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Proc>#new
+calls=2 130
+130 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout#subscribe
+calls=2 130
+130 15
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#tap
+calls=2 130
+130 1
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#initialize
+0 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Class#new
+0 70
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=3 19
+19 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize
+calls=3 19
+19 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=2 12
+12 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/fanout.rb
+cfn=ActiveSupport::Notifications::Fanout::Subscriber#initialize
+calls=2 12
+12 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 93
+93 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Event#initialize
+calls=1 93
+93 22
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=3 304
+304 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-test-0.6.2/lib/rack/test.rb
+cfn=Rack::Test::Session#initialize
+calls=1 287
+287 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/request.rb
+cfn=Rack::Request#initialize
+calls=1 302
+302 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/http/response.rb
+cfn=ActionDispatch::Response#initialize
+calls=1 304
+304 107
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 218
+218 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#initialize
+calls=1 218
+218 73
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 218
+218 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/generic.rb
+cfn=URI::Generic#initialize
+calls=1 218
+218 83
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 214
+214 1
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/http.rb
+cfn=URI::HTTP#initialize
+calls=1 214
+214 71
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 214
+214 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/http.rb
+cfn=URI::HTTP#initialize
+calls=1 214
+214 66
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::StringIO>#allocate
+calls=2 127
+127 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=StringIO#initialize
+calls=2 127
+127 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 214
+214 2
+cfl=/Users/Ruben/.rbenv/versions/1.9.3-p429/lib/ruby/1.9.1/uri/http.rb
+cfn=URI::HTTP#initialize
+calls=1 214
+214 66
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=2 32
+32 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/request.rb
+cfn=Rack::Request#initialize
+calls=1 29
+29 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/mock.rb
+cfn=Rack::MockResponse#initialize
+calls=1 32
+32 289
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 387
+387 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/utils.rb
+cfn=Rack::Utils::HeaderHash#initialize
+calls=1 387
+387 26
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 80
+80 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/rack-1.4.5/lib/rack/body_proxy.rb
+cfn=Rack::BodyProxy#initialize
+calls=1 80
+80 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::BasicObject>#allocate
+calls=1 93
+93 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb
+cfn=ActiveSupport::Notifications::Event#initialize
+calls=1 93
+93 18
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_controller/test_case.rb
+fn=ActionController::TemplateAssertions#setup_subscriptions
+16 20
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Class#new
+calls=3 19
+19 6
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/notifications.rb
+cfn=<Module::ActiveSupport::Notifications>#subscribe
+calls=2 26
+26 22
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=BrowsingTest#_run__1872042160307382491__setup__109291186151795893__callbacks
+401 25
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_controller/test_case.rb
+cfn=ActionController::TemplateAssertions#setup_subscriptions
+calls=1 407
+407 48
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/fixtures.rb
+cfn=ActiveRecord::TestFixtures#setup_fixtures
+calls=1 418
+418 323
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=BrowsingTest#_run__1872042160307382491__setup__109291186151795893__callbacks
+calls=2 440
+440 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#block_given?
+calls=2 448
+448 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activerecord-3.2.13/lib/active_record/identity_map.rb
+cfn=<Module::ActiveRecord::IdentityMap>#clear
+calls=1 35
+35 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails.rb
+cfn=<Module::Rails>#application
+calls=1 54
+54 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/railties-3.2.13/lib/rails/engine.rb
+cfn=Rails::Engine#routes
+calls=1 54
+54 2
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Runner#integration_session
+391 6
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+fn=ActionDispatch::Integration::Runner#respond_to?
+374 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#integration_session
+calls=1 375
+375 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 375
+375 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#integration_session
+calls=1 375
+375 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=2 375
+375 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#hash
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#to_s
+0 8
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Fixnum#abs
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=String#hash
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Module#name
+0 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveSupport::Callbacks::ClassMethods#__callback_runner_name
+413 43
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#name
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#abs
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#name
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#abs
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#name
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#abs
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#hash
+calls=1 414
+414 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Module#name
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#hash
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#abs
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Fixnum#to_s
+calls=2 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 414
+414 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#hash
+calls=1 414
+414 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveSupport::Callbacks::ClassMethods#__run_callback
+396 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__callback_runner_name
+calls=1 397
+397 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#respond_to?
+calls=1 398
+398 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=BrowsingTest#_run__1872042160307382491__setup__109291186151795893__callbacks
+calls=1 405
+405 404
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__callback_runner_name
+calls=1 397
+397 8
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 398
+398 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#_run__1371162033119361340__checkout__109291186151795893__callbacks
+calls=1 405
+405 12
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__callback_runner_name
+calls=1 397
+397 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/actionpack-3.2.13/lib/action_dispatch/testing/integration.rb
+cfn=ActionDispatch::Integration::Runner#respond_to?
+calls=1 398
+398 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=BrowsingTest#_run__1872042160307382491__teardown__1671519186112314292__callbacks
+calls=1 405
+405 407
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__callback_runner_name
+calls=1 397
+397 14
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 398
+398 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#_run__1371162033119361340__checkin__109291186151795893__callbacks
+calls=1 405
+405 24
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#class
+0 19
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveSupport::TestCase#_run_setup_callbacks
+384 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#class
+calls=1 385
+385 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks::ClassMethods#__run_callback
+calls=1 385
+385 426
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+fn=ActiveSupport::Callbacks#run_callbacks
+80 13
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=2 81
+81 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::TestCase#_run_setup_callbacks
+calls=1 81
+81 428
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::TestCase#_run_teardown_callbacks
+calls=1 81
+81 427
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 81
+81 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#_run_checkout_callbacks
+calls=1 81
+81 28
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 81
+81 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveRecord::ConnectionAdapters::AbstractAdapter#_run_checkin_callbacks
+calls=1 81
+81 46
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+fn=ActiveSupport::Testing::Performance::ForClassicTestUnit#run_test
+102 9
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/callbacks.rb
+cfn=ActiveSupport::Callbacks#run_callbacks
+calls=2 113
+113 868
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/test-unit-2.5.5/lib/test/unit/testcase.rb
+cfn=Test::Unit::TestCase#setup
+calls=1 104
+104 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance/ruby.rb
+cfn=ActiveSupport::Testing::Performance::Metrics::Base#profile
+calls=1 105
+105 2527
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/test-unit-2.5.5/lib/test/unit/testcase.rb
+cfn=Test::Unit::TestCase#teardown
+calls=1 112
+112 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+fn=ActiveSupport::Testing::Performance::Performer#run_test
+145 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+cfn=ActiveSupport::Testing::Performance::ForClassicTestUnit#run_test
+calls=1 146
+146 3404
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Integer#times
+0 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+cfn=ActiveSupport::Testing::Performance::Performer#run_test
+calls=1 37
+37 3405
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Integer#to_i
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#initialize_copy
+0 13
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#initialize_dup
+0 30
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 37
+37 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 40
+40 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_copy
+calls=1 1257
+1257 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_copy
+calls=2 1420
+1420 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 274
+274 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 183
+183 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 84
+84 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#initialize_copy
+calls=1 13
+13 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=String#initialize_copy
+calls=1 885
+885 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_copy
+calls=1 37
+37 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Time#initialize_copy
+calls=1 498
+498 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 440
+440 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#initialize_copy
+calls=1 40
+40 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=<Class::Hash>#allocate
+0 9
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Hash#merge
+0 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 37
+37 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 37
+37 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 274
+274 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 274
+274 5
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=<Class::Hash>#allocate
+calls=1 183
+183 3
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#initialize_dup
+calls=1 183
+183 4
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/delegating_attributes.rb
+fn=ActionDispatch::PerformanceTest#profile_options
+21 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Symbol#to_s
+0 5
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+fn=ActiveSupport::Testing::Performance#full_profile_options
+36 2
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+cfn=ActiveSupport::Testing::Performance#full_profile_options
+calls=1 37
+37 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Hash#merge
+calls=1 37
+37 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Symbol#to_s
+calls=1 21
+21 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/core_ext/class/delegating_attributes.rb
+cfn=ActionDispatch::PerformanceTest#profile_options
+calls=1 21
+21 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+fn=ActiveSupport::Testing::Performance::Performer#full_profile_options
+145 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+cfn=ActiveSupport::Testing::Performance#full_profile_options
+calls=1 146
+146 10
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#respond_to_missing?
+0 12
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+fn=Kernel#respond_to?
+0 26
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 166
+166 4
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 375
+375 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 332
+332 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=2 166
+166 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 34
+34 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 33
+33 1
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 375
+375 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to_missing?
+calls=1 332
+332 0
+
+fl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance/ruby.rb
+fn=ActiveSupport::Testing::Performance::Profiler#run
+36 55
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Kernel#respond_to?
+calls=1 36
+36 10
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/vendor/bundle/gems/activesupport-3.2.13/lib/active_support/testing/performance.rb
+cfn=ActiveSupport::Testing::Performance::Performer#full_profile_options
+calls=1 37
+37 11
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Integer#to_i
+calls=1 37
+37 0
+cfl=/Volumes/Data/BlueFrog/BigData/tdd/tdd1/ruby_runtime
+cfn=Integer#times
+calls=1 37
+37 3406
+

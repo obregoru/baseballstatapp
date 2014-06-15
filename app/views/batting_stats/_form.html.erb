@@ -1,0 +1,49 @@
+<%= form_for(@batting_stat) do |f| %>
+  <% if @batting_stat.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@batting_stat.errors.count, "error") %> prohibited this batting_stat from being saved:</h2>
+
+      <ul>
+      <% @batting_stat.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Player" %><br />
+    <%= f.collection_select(:player_id,  Player.find(:all), :id, :first_and_last_name , {:include_blank=>'Select a Player',:selected=>[@batting_stat.player_id]})%>
+  </div>
+  <div class="field">
+    <%= f.label :legacy_id %><br />
+    <%= f.text_field :legacy_id %>
+  </div>
+  <div class="field">
+    <%= f.label :at_bats %><br />
+    <%= f.number_field :at_bats %>
+  </div>
+  <div class="field">
+    <%= f.label :hits %><br />
+    <%= f.number_field :hits %>
+  </div>
+  <div class="field">
+    <%= f.label :doubles %><br />
+    <%= f.number_field :doubles %>
+  </div>
+  <div class="field">
+    <%= f.label :triples %><br />
+    <%= f.number_field :triples %>
+  </div>
+  <div class="field">
+    <%= f.label :home_runs %><br />
+    <%= f.number_field :home_runs %>
+  </div>
+  <div class="field">
+    <%= f.label :runs_batted %><br />
+    <%= f.number_field :runs_batted %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

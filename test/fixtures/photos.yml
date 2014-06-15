@@ -1,0 +1,27 @@
+NewYorkYankees:
+  id: 1
+  photo_name: New York Yankees Team Photo
+  file_name: nyt.jpg
+  imageable_id: 1
+  imageable_type: Team
+
+BobbyAbreu:
+  id: 2
+  photo_name: Bobby Abreau
+  file_name: babreau.png
+  imageable_id: 5
+  imageable_type: players
+
+AmericanLeague:
+  id: 3
+  photo_name: American League Logo
+  file_name: amlogo.jpg
+  imageable_id: 1
+  imageable_type: League
+  
+HomerBailey:
+  id: 4
+  photo_name: Homer Baily at bat
+  file_name: hbailbat.jpg
+  imageable_id: 1
+  imageable_type: Player

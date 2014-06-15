@@ -1,0 +1,157 @@
+finish out photos
+
+finish out pohto for leagues, teams, playsers
+
+finish out functional tests
+
+
+leagues
+model: league
+has_many :teams
+has_many :photos, :as=>:imagable
+league_name:string
+rails g scaffold leagues league_name:string
+
+
+
+teams
+model: team
+belongs_to :leagues
+has_many :players
+has_many :photos, :as :imagable
+league_id:integer
+team_name
+owner_name
+rails g scaffold teams league_id:integer team_name:string owner_name:string
+
+players
+model: player
+belongs_to :teams
+has_many batting_stats
+has_many :photos, as: :imageable
+team_id:integer
+legacy_id:string
+first_name:string
+last_name:string
+rails g scaffold player team_id:integer legacy_id:string first_name:string last_name:string
+
+batting_stats
+model: batting_stat
+belongs_to :players
+player_id:integer
+at_bats:integer 
+legacy_id:string
+hits:integer
+doubles:integer
+triples:inteer
+home_runs:integer
+runs_batted_in
+
+rails g scaffold batting_stats player_id:integer legacy_id:string at_bats:integer hits:integer doubles:integer triples:integer home_runs:integer runs_batted:integer
+
+photos
+model: photo
+belongs_to :imageable, polymorphic: true
+photo_name
+imagable_id:integer
+imagable_type:string
+
+rails g scaffold photos photo_name:string file_name:string imageable_id:integer imageable_type:string 
+
+
+class Photo < ActiveRecord::Base
+
+  belongs_to :imageable, polymorphic: true
+  attr_accessible :file_name, :imageable_id, :imageable_type, :photo_name
+  
+end
+
+
+require 'test_helper'
+
+class PhotoTest < ActiveSupport::TestCase
+  
+  should belong_to :imageable
+  
+  test 'create a photo record' do
+    photo = Photo.new
+    assert photo.save
+  end
+
+
+  
+end
+
+
+Test::Unit
+
+shoulda-matchers was originally a component of Shoulda -- it's what provides the nice should syntax which is demonstrated below. For this reason, include it in your Gemfile instead:
+
+group :test do
+  gem 'shoulda'
+end
+
+
+Some machines may require provisioning of shared memory:
+  http://www.postgresql.org/docs/9.2/static/kernel-resources.html#SYSVIPC
+When installing the postgres gem, including ARCHFLAGS is recommended:
+  ARCHFLAGS="-arch x86_64" gem install pg
+
+To install gems without sudo, see the Homebrew wiki.
+
+
+22
+
+Postgres could not connect to server: No such file or directory
+
+Here is the fix, more info here:
+
+https://github.com/mxcl/homebrew/issues/5004
+
+First, stop the db, then
+
+cd /var
+rm -r pgsql_socket
+ln -s /tmp pgsql_socket
+chown _postgres:_postgres pgsql_socket
+restart, finished
+UPDATE: HERE IS A BETTER FIX IF YOU ON OSX:
+
+
+
+
+
+
+To have launchd start postgresql at login:
+    ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
+Then to load postgresql now:
+    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+Or, if you don't want/need launchctl, you can just run:
+    pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+createuser su_admin
+(y)
+createuser tdd1
+n
+n
+createuser tdd1_test
+y crate db
+
+createuser nhmnnsoswohewc
+
+password 7A6t5ztGelGB_1UpaON8zCJLpo
+createdb -Onhmnnsoswohewc -Eutf8 decqbm3cr1dr9b
+
+
+createdb -Otdd1 -Eutf8 tdd1_development
+createdb -Otdd1 -Eutf8 tdd1_test
+createdb -Otdd1 -Eutf8 tdd1_production
+
+note - must actually create db with above
+then rake db:create:all
+then rake db:test:load
+
+
+test unit
+http://guides.rubyonrails.org/v3.2.13/testing.html
+
+

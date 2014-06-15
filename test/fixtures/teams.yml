@@ -1,0 +1,11 @@
+NewYorkYankees:
+  id: 1
+  league_id: 1
+  team_name: New York Yankees
+  owner_name:  Hank Steinbrenner
+
+CincinnatiReds:
+  id: 2
+  league_id: 2
+  team_name: Cincinnati Red
+  owner_name: Bob Castellini

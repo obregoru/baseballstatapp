@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Driven Development Example</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<h1>Test Driven Development Example</h1>
+<p style="width:40%">This app is intended to show TDD techniques <i>only</i> - it's not intended to showcase the user interface, security (there is not authentication or authorization in this app), jQuery, JavaScript or CSS. 
+	
+The app <i>does</i> include polymorphic associations but they are there for TDD purposes.
+	
+As time goes on I will build it up to include those aspects, but for now it's a barebones app used to showcase TDD.</p>
+<%= link_to "Leagues", leagues_path %><br/>
+<%= link_to "Teams", teams_path %><br/>
+<%= link_to "Players", players_path %></br>
+<%= link_to "Batting Stats", batting_stats_path %></br>
+<%= link_to "Photos", photos_path%>
+<%= yield %>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: decqbm3cr1dr9b
+  pool: 5
+  username: nhmnnsoswohewc
+  password:
+
+# Warning:   
+test: 
+  adapter: postgresql
+  encoding: unicode
+  database: decqbm3cr1dr9b
+  pool: 5
+  username: nhmnnsoswohewc
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: decqbm3cr1dr9b
+  pool: 5
+  username: nhmnnsoswohewc
+  password:
+

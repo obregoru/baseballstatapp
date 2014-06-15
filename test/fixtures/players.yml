@@ -1,0 +1,14 @@
+HomerBailey:
+  id: 1
+  team_id: 2
+  legacy_id:  baileho02
+  first_name: Homer
+  last_name: Bailey
+
+BobbyAbreu:
+  id: 2
+  team_id: 1
+  legacy_id: abreub01
+  first_name: Bobby
+  last_name: Abreu
+  

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>League:</b>
+  <%= @team.league_id %>
+</p>
+
+<p>
+  <b>Team name:</b>
+  <%= @team.team_name %>
+</p>
+
+<p>
+  <b>Owner name:</b>
+  <%= @team.owner_name %>
+</p>
+
+<p><%= link_to 'Add photo',"/teams/#{@team.id}" + '/photos/new' %></p>
+<% if  @team.photos.count>0 %><%= image_tag('/images/' + @team.photos.first.file_name)%>
+<% end %>
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Player:</b>
+  <%= @batting_stat.player_id %>
+</p>
+
+<p>
+  <b>Legacy:</b>
+  <%= @batting_stat.legacy_id %>
+</p>
+
+<p>
+  <b>At bats:</b>
+  <%= @batting_stat.at_bats %>
+</p>
+
+<p>
+  <b>Hits:</b>
+  <%= @batting_stat.hits %>
+</p>
+
+<p>
+  <b>Doubles:</b>
+  <%= @batting_stat.doubles %>
+</p>
+
+<p>
+  <b>Triples:</b>
+  <%= @batting_stat.triples %>
+</p>
+
+<p>
+  <b>Home runs:</b>
+  <%= @batting_stat.home_runs %>
+</p>
+
+<p>
+  <b>Runs batted:</b>
+  <%= @batting_stat.runs_batted %>
+</p>
+
+
+<%= link_to 'Edit', edit_batting_stat_path(@batting_stat) %> |
+<%= link_to 'Back', batting_stats_path %>
