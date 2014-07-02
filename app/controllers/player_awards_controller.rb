@@ -2,7 +2,7 @@ class PlayerAwardsController < ApplicationController
   # GET /player_awards
   # GET /player_awards.json
   def index
-    @player_awards = PlayerAward.includes(:player).all
+    @player_awards = PlayerAward.includes(:player,:league).all
 
     respond_to do |format|
       format.html # index.html.erb

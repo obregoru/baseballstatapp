@@ -21,7 +21,7 @@ class LeaguesControllerTest < ActionController::TestCase
   test "index should render correct layout" do
     get :index
     assert_template :index
-    assert_template layout: "layouts/application"
+    assert_template layout: "layouts/home"
   end
   
   test 'should show league' do

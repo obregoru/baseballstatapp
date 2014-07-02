@@ -3,13 +3,14 @@
 <table>
   <tr>
     <th>Player</th>
-    <th>Legacy</th>
     <th>At bats</th>
     <th>Hits</th>
     <th>Doubles</th>
     <th>Triples</th>
     <th>Home runs</th>
     <th>Runs batted</th>
+	<th>Batting average</th>
+	<th>Slugging percentage</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,13 +19,14 @@
 <% @batting_stats.each do |batting_stat| %>
   <tr>
     <td><%= batting_stat.player.first_name %></td>
-    <td><%= batting_stat.legacy_id %></td>
     <td><%= batting_stat.at_bats %></td>
     <td><%= batting_stat.hits %></td>
     <td><%= batting_stat.doubles %></td>
     <td><%= batting_stat.triples %></td>
     <td><%= batting_stat.home_runs %></td>
     <td><%= batting_stat.runs_batted %></td>
+	<td><%= batting_stat.batting_average %></td>
+	<td><%= batting_stat.slugging_percentage %></td>
     <td><%= link_to 'Show', batting_stat %></td>
     <td><%= link_to 'Edit', edit_batting_stat_path(batting_stat) %></td>
     <td><%= link_to 'Destroy', batting_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>

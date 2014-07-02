@@ -4,7 +4,6 @@ class LeagueTest< ActiveSupport::TestCase
   
   should have_many(:teams)
   should have_many(:photos)
-  
   should validate_presence_of(:league_name)
   
   should_not allow_mass_assignment_of(:created_at)

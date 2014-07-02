@@ -15,13 +15,7 @@
     <%= f.label "Player" %><br />
     <%= f.collection_select(:player_id,  Player.find(:all), :id, :first_and_last_name , {:include_blank=>'Select a Player',:selected=>[@batting_stat.player_id]})%>
   </div>
-  <div class="field">
-    <%= f.label :legacy_id %><br />
-    <%= f.text_field :legacy_id %>
-  </div>
-  
-  
-  
+
   <div class="field">
     <%= f.label :batting_year %><br />
     <%= f.number_field :batting_year %>

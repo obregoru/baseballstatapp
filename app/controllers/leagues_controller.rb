@@ -1,4 +1,5 @@
 class LeaguesController < ApplicationController
+  layout 'home'
   # GET /leagues
   # GET /leagues.json
   def index
