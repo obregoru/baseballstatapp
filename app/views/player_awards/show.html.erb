@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>League:</b>
+  <%= @player_award.league_id %>
+</p>
+
+<p>
+  <b>Award year:</b>
+  <%= @player_award.award_year %>
+</p>
+
+<p>
+  <b>Award name:</b>
+  <%= @player_award.award_name %>
+</p>
+
+<p>
+  <b>Player:</b>
+  <%= @player_award.player_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_player_award_path(@player_award) %> |
+<%= link_to 'Back', player_awards_path %>

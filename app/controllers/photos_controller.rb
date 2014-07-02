@@ -29,41 +29,17 @@ class PhotosController < ApplicationController
     end
   end
 
-  # GET /photos/new
-  # GET /photos/new.json
-=begin
-  def new
-    @photo = Photo.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @photo }
-    end
-  end
-=end
+
 
   # GET /photos/1/edit
   def edit
     @photo = Photo.find(params[:id])
   end
 
-  # POST /photos
-  # POST /photos.json
-=begin
-  def create
-    @photo = Photo.new(params[:photo])
 
-    respond_to do |format|
-      if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
-        format.json { render json: @photo, status: :created, location: @photo }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @photo.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-=end
+  # GET /photos/new
+  # GET /photos/new.json
   def new
     @photo = @imageable.photos.new
      resource, id = request.path.split('/')[1, 2]
@@ -79,19 +55,19 @@ class PhotosController < ApplicationController
     end
 
   end
+  
+  # POST /photos
+  # POST /photos.json
   def create
-
-#      @photo = Photo.new(:imageable_id=>params[:photo][:imageable_id], :imageable_type=>params[:photo][:imageable_type],:file_name=>params[:photo][:file_name],:photo_name=>params[:photo][:photo_name])
       @photo =Photo.new(:imageable_id=>params[:photo][:imageable_id], :imageable_type=>params[:photo][:imageable_type],:file_name=>params[:photo][:file_name],:photo_name=>params[:photo][:photo_name])
-
-      #raise params.to_yaml
       if @photo.save
     
-        redirect_to '/' + params[:photo][:imageable_type].pluralize.downcase  + '/' + params[:photo][:imageable_id], notice: "Photo created."
+        redirect_to '/' + params[:photo][:imageable_type].pluralize.downcase  + '/' + params[:photo][:imageable_id], notice: "Photo was successfully created."
       else
         render :new
       end
-    end
+  end
+
   # PUT /photos/1
   # PUT /photos/1.json
   def update

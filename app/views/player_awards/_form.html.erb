@@ -1,0 +1,33 @@
+<%= form_for(@player_award) do |f| %>
+  <% if @player_award.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player_award.errors.count, "error") %> prohibited this player_award from being saved:</h2>
+
+      <ul>
+      <% @player_award.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   <%= f.label :league %><br />
+   <%= f.collection_select(:league_id,  League.find(:all), :id,:league_name, {:include_blank=>'Select a League',:selected=>@player_award.league_id})%>
+ </div>
+  <div class="field">
+    <%= f.label :award_year %><br />
+    <%= f.text_field :award_year %>
+  </div>
+  <div class="field">
+    <%= f.label :award_name %><br />
+    <%= f.text_field :award_name %>
+  </div>
+  <div class="field">
+    <%= f.label "Player" %><br />
+    <%= f.collection_select(:player_id,  Player.find(:all), :id, :first_and_last_name , {:include_blank=>'Select a Player',:selected=>[@player_award.player_id]})%>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

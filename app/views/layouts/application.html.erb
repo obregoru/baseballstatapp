@@ -25,9 +25,9 @@
 
 <p>I could have developed it in Rails 4 and Ruby 2, but in light of the large codebase out there in older versions, I decided to use Rails 3.2.13 and Ruby 1.9.3. (There is a whole lot of legacy code out there that needs maintenance.)</p>
 
-<p>It was developed the site using test-Unit, shoulda, Mocha, and fixtures, and RSpec. </p>
+<p>It was developed the site using test-Unit, shoulda, Mocha, fixtures, Factory Girl, Capybara. </p>
 
-<p>I do know how to use Rails 4, Ruby 2, Factory Girl,  RSPec 2,  Launcy, Faker, Capybara, Cucumber, etc. but the purpose of this app is to demonstrate that I can maintain older apps. </p> 
+<p>I do know how to use Rails 4, Ruby 2,  RSPec 2, Launcy, Faker,  Cucumber, etc. but the purpose of this app is to demonstrate that I can maintain older apps. </p> 
 
 <p>The database backend is PostGres, and it is hosted on Heroku. </p>
 
@@ -42,6 +42,7 @@
 <%= link_to "Teams", teams_path %><br/>
 <%= link_to "Players", players_path %></br>
 <%= link_to "Batting Stats", batting_stats_path %></br>
+<%= link_to "Player Awards", player_awards_path%></br>
 <%= link_to "Photos", photos_path%>
 <%= yield %>
 </div>

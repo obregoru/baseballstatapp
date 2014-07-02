@@ -13,9 +13,10 @@ class LeaguesControllerTest < ActionController::TestCase
   
   test "should get index" do
     get :index
-    assert_response :success
+    assert_response :success 
     assert_not_nil assigns(:leagues), 'assigned @league'
   end
+  
   
   test "index should render correct layout" do
     get :index
@@ -32,8 +33,10 @@ class LeaguesControllerTest < ActionController::TestCase
     assert_difference('League.count') do
       post :create, league: {league_name: 'Other League'}
     end
+    assert assigns(:league)
     assert_redirected_to league_path(assigns(:league)), 'Redirected to league_path'
     assert_equal 'League was successfully created.', flash[:notice]
+    
   end
   
   test "should update league" do

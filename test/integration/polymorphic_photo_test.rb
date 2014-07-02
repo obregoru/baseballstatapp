@@ -3,11 +3,7 @@ require 'test_helper'
 class PolymorphicPhotoTest<ActionDispatch::IntegrationTest
 fixtures  :leagues, :teams, :photos
 
-  test 'calculate battering average for player' do
-    player=Player.includes(:batting_stats).where(:last_name=>"Bailey").first
-    puts player.batting_stats.first.hits.to_i # 8  
-    puts player.batting_stats.first.to_yaml
-  end
+
 
   test 'create poloymorphic league picture' do
     league=League.find(1)

@@ -1,19 +1,42 @@
 BobbyAbreu:
   id: 1
+  league_id: 1
   player_id: 2
-  at_bats: 605
+  batting_year: 2011
+  at_bats: 55
   hits: 171
   doubles: 40
   triples: 5
   home_runs: 16
   runs_batted: 101
-  
+  batting_average: .114
+  slugging_percentage: .20
+    
 HomerBailey:
   id: 2
+  league_id: 2
   player_id: 1
+  batting_year: 2012
   at_bats: 70
   hits: 8
   doubles: 1 
   triples: 0
   home_runs: 0 
   runs_batted: 5
+  batting_average: .114
+  slugging_percentage: .20
+  
+TripleCrown:
+  id: 3
+  league_id: 1
+  player_id: 2
+  batting_year: 2012
+  at_bats: 900
+  hits: 900
+  doubles: 1 
+  triples: 0
+  home_runs: 900 
+  runs_batted: 900
+  batting_average: .999
+  slugging_percentage: .999
+  

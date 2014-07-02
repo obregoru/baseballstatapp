@@ -4,7 +4,10 @@ class PlayerTest<ActiveSupport::TestCase
   
   should belong_to(:team)
   should have_many(:batting_stats)
+  
   should have_many(:photos)
+  should have_many(:player_awards)
+  
   should validate_presence_of(:first_name)
   should validate_presence_of(:last_name)
   

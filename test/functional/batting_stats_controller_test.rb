@@ -50,4 +50,7 @@ class BattingStatsControllerTest <ActionController::TestCase
   test 'should route to batting stats' do
     assert_routing '/batting_stats/1', {controller: "batting_stats", action: "show", id: "1"}
   end 
+  
+
+      
 end

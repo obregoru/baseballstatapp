@@ -19,6 +19,19 @@
     <%= f.label :legacy_id %><br />
     <%= f.text_field :legacy_id %>
   </div>
+  
+  
+  
+  <div class="field">
+    <%= f.label :batting_year %><br />
+    <%= f.number_field :batting_year %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label :league_id %><br />
+    <%= f.number_field :league_id %>
+  </div>
   <div class="field">
     <%= f.label :at_bats %><br />
     <%= f.number_field :at_bats %>
@@ -43,6 +56,15 @@
     <%= f.label :runs_batted %><br />
     <%= f.number_field :runs_batted %>
   </div>
+  <div class="field">
+    <%= f.label :batting_average %><br />
+    <%= f.number_field :batting_average %>
+  </div>
+  <div class="field">
+    <%= f.label :slugging_percentage %><br />
+    <%= f.number_field :slugging_percentage %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

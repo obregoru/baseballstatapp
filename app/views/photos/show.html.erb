@@ -20,7 +20,7 @@
   <%= @photo.imageable_type %>
 </p>
 
-<p><%= image_tag('/images/' + @photo.file_name)%></p>
+<p><%= image_tag('/images/' + @photo.file_name || '')%></p>
 
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |

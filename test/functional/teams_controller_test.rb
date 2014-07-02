@@ -5,6 +5,8 @@ class TeamsControllerTest < ActionController::TestCase
   def setup
     assert  @team = Team.new, 'Setup'
     @team=teams(:NewYorkYankees)
+    FactoryGirl.reload
+
     
   end
   
@@ -52,7 +54,7 @@ class TeamsControllerTest < ActionController::TestCase
   test 'set a custom header' do 
     @request.env["CUSTOM_HEADER"] = "bar"
     assert_difference('Team.count') do
-      post :create, team: {team_name: 'Another Team'}
+      post :create, team: {team_name: 'Another Team',id: 200}
     end
     assert_redirected_to team_path(assigns(:team)), 'Redirected to team_path'
     assert_equal 'Team was successfully created.', flash[:notice]
@@ -63,5 +65,5 @@ class TeamsControllerTest < ActionController::TestCase
     assert_routing '/teams/1', {controller: "teams", action: "show", id: "1"}
   end
   
-  
+
 end

@@ -1,0 +1,29 @@
+<h1>Listing player_awards</h1>
+
+<table>
+  <tr>
+    <th>League</th>
+    <th>Award year</th>
+    <th>Award name</th>
+    <th>Player</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @player_awards.each do |player_award| %>
+  <tr>
+    <td><%= player_award.league.league_name %></td>
+    <td><%= player_award.award_year %></td>
+    <td><%= player_award.award_name %></td>
+    <td><%= player_award.player.first_and_last_name %></td>
+    <td><%= link_to 'Show', player_award %></td>
+    <td><%= link_to 'Edit', edit_player_award_path(player_award) %></td>
+    <td><%= link_to 'Destroy', player_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Player award', new_player_award_path %>

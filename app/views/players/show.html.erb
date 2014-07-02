@@ -20,7 +20,7 @@
   <%= @player.last_name %>
 </p>
 <p><%= link_to 'Add photo',"/players/#{@player.id}" + '/photos/new' %></p>
-<p><%= image_tag('/images/' + @player.photos.first.file_name.to_s ) %></p>
+<p><%= image_tag('/images/' + @player.photos.first.file_name.to_s )  rescue 'No Image'%></p>
 
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

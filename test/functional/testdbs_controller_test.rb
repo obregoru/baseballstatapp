@@ -6,14 +6,12 @@ class TestdbsControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
-    puts 'should get index'
     get :index
     assert_response :success
     assert_not_nil assigns(:testdbs)
   end
 
   test "should get new" do
-    puts 'should get new'
     get :new
     assert_response :success
   end

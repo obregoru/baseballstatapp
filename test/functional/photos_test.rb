@@ -28,10 +28,11 @@ class PhotosControllerTest <ActionController::TestCase
   end
   
   test 'should create photo' do
+
     assert_difference('Photo.count') do
-      post :create,  photo: {photo_name: 'New photo', file_name:'aab.jpg'}
+      post :create,  photo: {photo_name: 'New photo', file_name:'aab.jpg',imageable_id: 1, imageable_type:"Leagues"}
     end
-    assert_redirected_to photo_path(assigns(:photo)), 'Redirected to photo path'
+    assert_redirected_to '/leagues/1', 'Redirected to parent league path'
     assert_equal 'Photo was successfully created.', flash[:notice]
   end
   

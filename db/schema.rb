@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140608033655) do
+ActiveRecord::Schema.define(:version => 20140630233512) do
 
   create_table "batting_stats", :force => true do |t|
     t.integer  "player_id"
@@ -22,8 +22,12 @@ ActiveRecord::Schema.define(:version => 20140608033655) do
     t.integer  "triples"
     t.integer  "home_runs"
     t.integer  "runs_batted"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",                                        :null => false
+    t.datetime "updated_at",                                        :null => false
+    t.integer  "batting_year"
+    t.integer  "league_id"
+    t.decimal  "batting_average",     :precision => 3, :scale => 2
+    t.decimal  "slugging_percentage", :precision => 3, :scale => 2
   end
 
   create_table "leagues", :force => true do |t|
@@ -41,6 +45,15 @@ ActiveRecord::Schema.define(:version => 20140608033655) do
     t.datetime "updated_at",     :null => false
   end
 
+  create_table "player_awards", :force => true do |t|
+    t.integer  "league_id"
+    t.string   "award_year"
+    t.string   "award_name"
+    t.integer  "player_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "players", :force => true do |t|
     t.integer  "team_id"
     t.string   "legacy_id"
@@ -48,6 +61,7 @@ ActiveRecord::Schema.define(:version => 20140608033655) do
     t.string   "last_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "email"
   end
 
   create_table "teams", :force => true do |t|

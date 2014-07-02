@@ -1,4 +1,7 @@
 Tdd1::Application.routes.draw do
+  resources :player_awards
+
+
   resources :photos
 
 

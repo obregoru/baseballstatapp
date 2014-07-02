@@ -4,6 +4,8 @@ class PlayersControllerTest< ActionController::TestCase
   def setup
     assert @player=Player.new, 'Setup'
     @player=players(:HomerBailey)
+    FactoryGirl.reload
+   
   end
   
   def teardown
@@ -46,6 +48,7 @@ class PlayersControllerTest< ActionController::TestCase
     end
     assert_redirected_to players_path
   end
+
 
   test 'should route to player' do
     assert_routing '/players/1', {controller: "players", action: "show", id: "1"}

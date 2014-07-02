@@ -53,10 +53,10 @@ end
 group :test do
   gem 'database_cleaner', '0.9.1'
   gem 'factory_girl_rails', '1.7.0'
-  gem 'mocha', '0.13.3', :require=>false
   gem 'poltergeist', '~> 1.3.0'
   gem 'shoulda' , '3.4.0'
   gem 'ruby-prof'
   gem 'test-unit', '~>2.5.4'
-  
+  gem 'mocha', '0.13.3', :require=>false
+ 
 end
