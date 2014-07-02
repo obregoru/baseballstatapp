@@ -27,13 +27,19 @@ width:100%;
 
 }
 
+.challenge{
+	padding: 10px;
+}
 
+.stats{
+	font-size:9px;
+}
 .menu_nav.a:link {color: #ffffff;text-decoration:none;}
 .menu_nav a:visited {color: #ffffff;text-decoration:none;}
 .menu_nav a:hover {color: #000000;text-decoration:none; background-color:#ffffff;}
 .menu_nav a:focus {color: #ffffff;text-decoration:none;}
 .menu_nav a:active {color: #ffffff;text-decoration:none;}
-.menu_nav a:link {color: #009900;text-decoration:none;}
+
 
 .the_content{
     clear:both;		
@@ -49,7 +55,7 @@ img {
 {
 border-left: solid 5px #7b98bf;
 border-right: solid 5px #7b98bf;
-height: 1200px;
+height: 1400px;
 margin-left: auto;
 margin-right: auto;
 padding: 0px;
@@ -463,7 +469,7 @@ p.margin {margin-left: .3cm}
 
 p.margin {margin-right: .3cm}
 
-table, td, th { vertical-align: middle; border: none; text-align: left; padding-right: 20px;}
+table, td, th { vertical-align: middle; border: none; text-align: left; padding-right: 5px;}
 
 th { border-bottom: 1px solid #DDD; }
 

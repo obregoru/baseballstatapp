@@ -1,6 +1,29 @@
 class PlayerAwardsController < ApplicationController
   # GET /player_awards
   # GET /player_awards.json
+  
+  def create_awards
+    (1..2).each do |league|
+    (1970..2050).each do |batting_year|
+      triple_crown_winner= BattingStat.new.find_triple_crown_player_by_year_and_league(batting_year,league)
+      if !(triple_crown_winner.nil?)
+        existing_award= PlayerAward.where('award_name = ? and award_year=? and league_id=?', 'Triple Crown',batting_year.to_s, triple_crown_winner.league_id ).first
+        if !(existing_award.nil?)
+          existing_award.destroy
+        end
+        award = PlayerAward.new
+        award.league_id = triple_crown_winner.league_id
+        award.player_id = triple_crown_winner.player_id
+        award.award_name = "Triple Crown"
+        award.award_year = batting_year
+        award.save
+      end 
+    end
+  end
+   
+      redirect_to '/player_awards'
+
+  end
   def index
     @player_awards = PlayerAward.includes(:player,:league).all
 

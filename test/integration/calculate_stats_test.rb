@@ -77,6 +77,9 @@ test 'mock for an instance' do
   assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
 end
 
+
+
+
 test 'find Triple Crown winner' do
   
   battingstat=BattingStat.new
@@ -98,7 +101,7 @@ test 'find Triple Crown winner and create award' do
   assert triple_crown_award.save!, 'saving triple crown award'
 end
 
-test 'find Triple Crown winner and create award and noftify player' do
+test 'find a single Triple Crown winner and create award and noftify player' do
   battingstat=BattingStat.find(3)
   BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
   triple_crown_winner=  BattingStat.find_triple_crown_player_by_year_and_league(2012,1)

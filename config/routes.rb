@@ -1,12 +1,14 @@
 Tdd1::Application.routes.draw do
+   
+  match 'create_awards' => 'player_awards#create_awards', :via => :get
+  
   resources :player_awards
-
-
+    
+ 
   resources :photos
 
 
   resources :batting_stats
-
 
   resources :players do
     resources :photos

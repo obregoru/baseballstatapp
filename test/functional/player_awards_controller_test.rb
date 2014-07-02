@@ -31,4 +31,13 @@ class PlayerAwardsControllerTest<ActionController::TestCase
     end
     assert_redirected_to player_award_path(assigns(:player_award)), 'Redirected to player_awards_path'
   end
+  
+  
+  test 'should create player awards for all years' do
+    assert post :create_awards
+  
+  end
+  
+  
+  
 end
