@@ -31,7 +31,7 @@ class PlayersControllerTest< ActionController::TestCase
   
   test 'should create Player' do
     assert_difference('Player.count') do
-      post :create, player: {first_name: 'Ruben', last_name: 'Obregon'}
+      post :create, player: {team_id: 1, first_name: 'Ruben', last_name: 'Obregon'}
     end
     assert_redirected_to player_path(assigns(:player)), 'Redirected to player'
     assert_equal 'Player was successfully created.', flash[:notice]

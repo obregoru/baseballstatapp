@@ -5,5 +5,5 @@ class Team < ActiveRecord::Base
   
   attr_accessible :league_id, :owner_name, :team_name
   
-  validates :team_name, presence: true
+  validates :team_name, :league_id, presence: true
 end

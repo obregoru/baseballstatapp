@@ -10,18 +10,20 @@ class PlayerTest<ActiveSupport::TestCase
   
   should validate_presence_of(:first_name)
   should validate_presence_of(:last_name)
+  should validate_presence_of(:team_id)
   
   should_not allow_mass_assignment_of(:created_at)
   should_not allow_mass_assignment_of(:updated_at)
   
-  test "player must have first and last name" do
+  test "player must have first and last name and league id" do
     player=Player.new
     player.first_name='Bo'
-    refute player.save, 'Cannot save without both a first and last name'
+    refute player.save, 'Cannot save without both a first and last name and league_id'
   end
   
-  test "save player with first and last name" do
+  test "save player with team_id, first and last name" do
     player=Player.new
+    player.team_id=1
     player.first_name='Bo'
     player.last_name='Jackson'
     assert player.save, 'Saved a player with a first and last name'

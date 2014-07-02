@@ -33,7 +33,7 @@ class TeamsControllerTest < ActionController::TestCase
   
   test 'should create Team' do
     assert_difference('Team.count') do
-      post :create, team: {team_name: 'Other Team'}
+      post :create, team: {league_id: 1, team_name: 'Other Team'}
     end
     assert_redirected_to team_path(assigns(:team)), 'Redirected to team_path'
     assert_equal 'Team was successfully created.', flash[:notice]
@@ -54,7 +54,7 @@ class TeamsControllerTest < ActionController::TestCase
   test 'set a custom header' do 
     @request.env["CUSTOM_HEADER"] = "bar"
     assert_difference('Team.count') do
-      post :create, team: {team_name: 'Another Team',id: 200}
+      post :create, team: {league_id: 1, team_name: 'Another Team',id: 200}
     end
     assert_redirected_to team_path(assigns(:team)), 'Redirected to team_path'
     assert_equal 'Team was successfully created.', flash[:notice]

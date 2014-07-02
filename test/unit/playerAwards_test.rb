@@ -5,6 +5,9 @@ class PlayerAwardTest< ActiveSupport::TestCase
 should belong_to :league
 should belong_to :player
 
+should validate_presence_of(:league_id)
+should validate_presence_of(:player_id)
+
 should_not allow_mass_assignment_of(:created_at)
 should_not allow_mass_assignment_of(:updated_at)  
 
@@ -26,6 +29,8 @@ end
   
 test "should save PlayerAward with required fields"  do
    player_award=PlayerAward.new
+   player_award.league_id=1
+   player_award.player_id=1
    player_award.award_year=1997
    player_award.award_name='Golden Ball'
    assert player_award.save!

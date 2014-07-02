@@ -4,7 +4,7 @@ class Player < ActiveRecord::Base
   has_many :photos, as: :imageable
   has_many :player_awards
   attr_accessible :first_name, :last_name, :legacy_id, :team_id
-  validates :first_name, :last_name, presence: true
+  validates :first_name, :last_name, :team_id, presence: true
   
   def first_and_last_name
      "#{first_name} #{last_name}"

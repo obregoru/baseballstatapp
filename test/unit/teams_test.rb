@@ -5,16 +5,19 @@ class TeamTest < ActiveSupport::TestCase
   should have_many(:players)  
   should have_many(:photos)
   should validate_presence_of(:team_name)
+  should validate_presence_of(:league_id)
   should_not allow_mass_assignment_of(:created_at)
   should_not allow_mass_assignment_of(:updated_at)
+  
   
   test 'team must have a team name' do
     team=Team.new
     refute team.save, 'saved the team'
   end
   
-  test 'team saves with a team name' do
+  test 'team saves with a team name and league id' do
     team=Team.new
+    team.league_id=1
     team.team_name='Dodgers'
     assert team.save, 'saved the team with a team name'
   end
