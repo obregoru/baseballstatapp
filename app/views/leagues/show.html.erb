@@ -4,8 +4,10 @@
   <b>League name:</b>
   <%= @league.league_name %>
 </p>
+<% @league.photos.each do |p|%>
 <%= link_to 'Add photo',"/leagues/#{@league.id}" + '/photos/new' %></p>
-<p><%=image_tag('/images/' + @league.photos.first.file_name.to_s) rescue 'No Image'%> </p>
+<p><%=image_tag('/images/' + p.file_name.to_s) rescue 'No Image'%> </p>
+<%end %>
 
 <%= link_to 'Edit', edit_league_path(@league) %> |
 <%= link_to 'Back', leagues_path %>

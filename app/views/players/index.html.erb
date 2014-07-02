@@ -3,9 +3,7 @@
 <table>
   <tr>
     <th>Team</th>
-    <th>Legacy</th>
-    <th>First name</th>
-    <th>Last name</th>
+    <th>Player</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,10 +11,9 @@
 
 <% @players.each do |player| %>
   <tr>
-    <td><%= player.team.team_name %></td>
-    <td><%= player.legacy_id %></td>
-    <td><%= player.first_name %></td>
-    <td><%= player.last_name %></td>
+	  
+	 <td><%= link_to( player.team.team_name, team_path(player.team.league_id) )%></td>
+    <td><%= player.first_and_last_name %></td>
     <td><%= link_to 'Show', player %></td>
     <td><%= link_to 'Edit', edit_player_path(player) %></td>
     <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Player</th>
+	<th>Year</th>
     <th>At bats</th>
     <th>Hits</th>
     <th>Doubles</th>
@@ -10,7 +11,7 @@
     <th>Home runs</th>
     <th>Runs batted</th>
 	<th>Batting average</th>
-	<th>Slugging percentage</th>
+	<th>Slugging %</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +19,8 @@
 
 <% @batting_stats.each do |batting_stat| %>
   <tr>
-    <td><%= batting_stat.player.first_name %></td>
+	   <td> <%= link_to( batting_stat.player.first_and_last_name, player_path(batting_stat.player_id) )%></td>
+	<td><%= batting_stat.batting_year %></td> 
     <td><%= batting_stat.at_bats %></td>
     <td><%= batting_stat.hits %></td>
     <td><%= batting_stat.doubles %></td>

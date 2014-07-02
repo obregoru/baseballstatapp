@@ -12,7 +12,7 @@
 
 <% @teams.each do |team| %>
   <tr>
-    <td><%= team.league.league_name %></td>
+    <td><%= link_to( team.league.league_name, league_path(team.league_id) )%></td>
     <td><%= team.team_name %></td>
     <td><%= team.owner_name %></td>
     <td><%= link_to 'Show', team %></td>

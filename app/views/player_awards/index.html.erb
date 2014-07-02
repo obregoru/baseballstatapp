@@ -13,10 +13,10 @@
 
 <% @player_awards.each do |player_award| %>
   <tr>
-    <td><%= player_award.league.league_name %></td>
+	 <td><%= link_to( player_award.league.league_name , league_path(player_award.league_id) )%></td>
     <td><%= player_award.award_year %></td>
     <td><%= player_award.award_name %></td>
-    <td><%= player_award.player.first_and_last_name %></td>
+	<td><%= link_to( player_award.player.first_and_last_name, player_path(player_award.player_id) )%></td>
     <td><%= link_to 'Show', player_award %></td>
     <td><%= link_to 'Edit', edit_player_award_path(player_award) %></td>
     <td><%= link_to 'Destroy', player_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>

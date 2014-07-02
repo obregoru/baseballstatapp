@@ -2,7 +2,7 @@
 
 <p>
   <b>Team:</b>
-  <%= @player.team_id %>
+    <%= link_to( @player.team.team_name, team_path(@player.team_id) )%>
 </p>
 
 <p>
@@ -20,7 +20,9 @@
   <%= @player.last_name %>
 </p>
 <p><%= link_to 'Add photo',"/players/#{@player.id}" + '/photos/new' %></p>
-<p><%= image_tag('/images/' + @player.photos.first.file_name.to_s )  rescue 'No Image'%></p>
+<% @player.photos.each do |p|%>
+<p><%= image_tag('/images/' + p.file_name.to_s )  rescue 'No Image'%></p>
 
+<%end%>
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

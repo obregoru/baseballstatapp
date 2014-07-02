@@ -13,7 +13,7 @@ class TeamsController < ApplicationController
   # GET /teams/1
   # GET /teams/1.json
   def show
-    @team = Team.includes(:photos).find(params[:id])
+    @team = Team.includes(:photos,:league).find(params[:id])
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @team }

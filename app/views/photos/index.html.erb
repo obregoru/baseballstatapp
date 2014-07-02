@@ -3,8 +3,9 @@
 <table>
   <tr>
     <th>Photo name</th>
+	<th>Thumbnail</th>
     <th>File name</th>
-    <th>Imageable</th>
+    <th>Imageable id</th>
     <th>Imageable type</th>
     <th></th>
     <th></th>
@@ -14,7 +15,8 @@
 <% @photos.each do |photo| %>
   <tr>
     <td><%= photo.photo_name %></td>
-    <td><%= photo.file_name %></td>
+	<td><%= link_to(image_tag('/images/' + photo.file_name, :style=>"width:50px"),photo_path(photo.id) )%> </td>
+	<td><%= link_to photo.file_name,"/photos/#{photo.id}"%></td>
     <td><%= photo.imageable_id %></td>
     <td><%= photo.imageable_type %></td>
     <td><%= link_to 'Show', photo %></td>

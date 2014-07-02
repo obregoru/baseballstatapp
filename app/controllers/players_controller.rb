@@ -13,7 +13,7 @@ class PlayersController < ApplicationController
   # GET /players/1
   # GET /players/1.json
   def show
-    @player = Player.includes(:photos).find(params[:id])
+    @player = Player.includes(:photos,:team).find(params[:id])
 
     
     respond_to do |format|

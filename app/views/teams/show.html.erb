@@ -2,7 +2,7 @@
 
 <p>
   <b>League:</b>
-  <%= @team.league_id %>
+    <%= link_to( @team.league.league_name, league_path(@team.league_id) )%>
 </p>
 
 <p>
@@ -16,7 +16,8 @@
 </p>
 
 <p><%= link_to 'Add photo',"/teams/#{@team.id}" + '/photos/new' %></p>
-<% if  @team.photos.count>0 %><%= image_tag('/images/' + @team.photos.first.file_name)%>
+<% @team.photos.each do |p|%>
+<%= image_tag('/images/' + p.file_name)%>
 <% end %>
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>
