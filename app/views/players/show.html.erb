@@ -19,10 +19,38 @@
   <b>Last name:</b>
   <%= @player.last_name %>
 </p>
+<h3>Batting statistics</h3>
+<table class='stats'>
+  <tr>
+	<th>Year</th>
+    <th>At bats</th>
+    <th>Hits</th>
+    <th>Doubles</th>
+    <th>Triples</th>
+    <th>Home runs</th>
+    <th>Runs batted</th>
+	<th>Batting average</th>
+	<th>Slugging %</th>
+  </tr>
+  
+<% @stats.each do |s|%>
+<tr>
+	<td><%= s.batting_year %></td> 
+    <td><%= s.at_bats %></td>
+    <td><%= s.hits %></td>
+    <td><%= s.doubles %></td>
+    <td><%= s.triples %></td>
+    <td><%= s.home_runs %></td>
+    <td><%= s.runs_batted %></td>
+	<td><%= s.batting_average %></td>
+	<td><%= s.slugging_percentage %></td>
+</tr>
+
+<% end%>
+</table>
 <p><%= link_to 'Add photo',"/players/#{@player.id}" + '/photos/new' %></p>
 <% @player.photos.each do |p|%>
 <p><%= image_tag('/images/' + p.file_name.to_s )  rescue 'No Image'%></p>
-
-<%end%>
+<% end %>
 <%= link_to 'Edit', edit_player_path(@player) %> |
 <%= link_to 'Back', players_path %>

@@ -12,7 +12,7 @@
 <% @players.each do |player| %>
   <tr>
 	  
-	 <td><%= link_to( player.team.team_name, team_path(player.team.league_id) )%></td>
+	 <td><%= link_to( player.team.team_name, team_path(player.team.id) )%></td>
     <td><%= player.first_and_last_name %></td>
     <td><%= link_to 'Show', player %></td>
     <td><%= link_to 'Edit', edit_player_path(player) %></td>

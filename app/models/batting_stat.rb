@@ -4,29 +4,33 @@ class BattingStat < ActiveRecord::Base
   
 
   def find_max_batting_avg_by_year_and_league(batting_year, league_id)
-    max_bat_avg= BattingStat.where('at_bats > 400 and batting_year=?', batting_year).order("batting_average desc")
+    max_bat_avg= BattingStat.where('at_bats >= 400 and batting_year=? and league_id=?', batting_year, league_id).order("batting_average desc")
     if max_bat_avg.first.nil?
       nil
     else
+      puts  max_bat_avg.first.player_id 
       max_bat_avg.first.player_id 
     end
   end
  
   def find_max_home_runs_by_year_and_league(batting_year, league_id)
-    max_home_runs=BattingStat.where('at_bats > 400  and batting_year=?', batting_year).order("home_runs desc")
+    max_home_runs=BattingStat.where('at_bats >= 400  and batting_year=? and league_id=?', batting_year, league_id).order("home_runs desc")
     if max_home_runs.first.nil?
       nil
     else
+      puts max_home_runs.first.player_id 
       max_home_runs.first.player_id 
     end
    
   end
   
   def find_max_runs_batted_by_year_and_league(batting_year, league_id)
-    max_batted=BattingStat.where('at_bats > 400 and batting_year=?', batting_year).order("runs_batted desc")
+    max_batted=BattingStat.where('at_bats >= 400 and batting_year=? and league_id=?', batting_year, league_id).order("runs_batted desc")
     if max_batted.first.nil?
       nil
     else
+      puts batting_year
+      puts max_batted.first.player_id
       max_batted.first.player_id
     end
        

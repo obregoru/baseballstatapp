@@ -14,7 +14,9 @@ class PlayersController < ApplicationController
   # GET /players/1.json
   def show
     @player = Player.includes(:photos,:team).find(params[:id])
-
+    @stats = BattingStat.where('player_id =?', params[:id]).order('batting_year desc')
+    
+   
     
     respond_to do |format|
       format.html # show.html.erb

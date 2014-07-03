@@ -1,11 +1,26 @@
+require_relative '../../lib/BaseballStats.rb'
+
 class PlayerAwardsController < ApplicationController
   # GET /player_awards
   # GET /player_awards.json
-  
+  include BaseballStats
+
+
   def create_awards
+=begin   
+    BattingStat.all.each do |bs|
+  
+      bs.batting_average = battingAverage(bs.hits, bs.at_bats)
+      bs.slugging_percentage  = sluggingPercentage(bs.hits, bs.doubles, bs.triples, bs.home_runs, bs.at_bats)
+      bs.save
+    end
+=end  
+    
+    
     (1..2).each do |league|
-    (1970..2050).each do |batting_year|
+    (2005..2012).each do |batting_year|
       triple_crown_winner= BattingStat.new.find_triple_crown_player_by_year_and_league(batting_year,league)
+      puts 'triple crown winner ->' + triple_crown_winner.to_yaml
       if !(triple_crown_winner.nil?)
         existing_award= PlayerAward.where('award_name = ? and award_year=? and league_id=?', 'Triple Crown',batting_year.to_s, triple_crown_winner.league_id ).first
         if !(existing_award.nil?)

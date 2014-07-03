@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140630233512) do
+ActiveRecord::Schema.define(:version => 20140703205851) do
 
   create_table "batting_stats", :force => true do |t|
     t.integer  "player_id"
@@ -28,6 +28,25 @@ ActiveRecord::Schema.define(:version => 20140630233512) do
     t.integer  "league_id"
     t.decimal  "batting_average",     :precision => 3, :scale => 2
     t.decimal  "slugging_percentage", :precision => 3, :scale => 2
+    t.integer  "team_id"
+  end
+
+  create_table "batting_stats_import", :id => false, :force => true do |t|
+    t.string  "player_id", :limit => 20
+    t.string  "yearid",    :limit => 10
+    t.string  "league",    :limit => 10
+    t.string  "teamid",    :limit => 20
+    t.string  "g",         :limit => 20
+    t.string  "ab",        :limit => 20
+    t.string  "r",         :limit => 20
+    t.string  "h",         :limit => 20
+    t.string  "twob",      :limit => 20
+    t.string  "threeb",    :limit => 20
+    t.string  "hr",        :limit => 20
+    t.string  "rbi",       :limit => 20
+    t.string  "sb",        :limit => 20
+    t.string  "cs",        :limit => 20
+    t.integer "league_id", :limit => 2
   end
 
   create_table "leagues", :force => true do |t|
@@ -62,6 +81,14 @@ ActiveRecord::Schema.define(:version => 20140630233512) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "email"
+  end
+
+  create_table "players_import", :id => false, :force => true do |t|
+    t.string  "legacy_id", :limit => 20
+    t.string  "birthyear", :limit => 10
+    t.string  "namefirst", :limit => 20
+    t.string  "namelast",  :limit => 30
+    t.integer "player_id", :limit => 2
   end
 
   create_table "teams", :force => true do |t|
