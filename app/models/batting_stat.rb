@@ -1,6 +1,13 @@
 class BattingStat < ActiveRecord::Base
   belongs_to :player
-  attr_accessible :at_bats, :doubles, :hits, :home_runs, :legacy_id, :player_id, :runs_batted, :triples, :batting_year,:league_id, :batting_average, :slugging_percentage
+  belongs_to :team
+  belongs_to :league
+  
+  validates :player_id, presence: true
+  validates :team_id, presence: true
+  validates :league_id, presence: true
+   
+  attr_accessible :at_bats, :doubles, :hits, :home_runs, :legacy_id, :player_id, :runs_batted, :triples, :batting_year,:league_id, :batting_average, :slugging_percentage, :team_id
   
 
   def find_max_batting_avg_by_year_and_league(batting_year, league_id)
@@ -53,5 +60,17 @@ class BattingStat < ActiveRecord::Base
      end
      
      
+   end
+   
+   def find_prior_year_and_next_year(batting_year, player_id)
+     two_years_batting_stats=BattingStat.where('player_id=? and (batting_year=? or batting_year=?)', player_id, batting_year, batting_year-1).order('batting_year desc').select("id, batting_average").all
+     if two_years_batting_stats.count>1
+         two_years_batting_stats.first.batting_average -  two_years_batting_stats.last.batting_average
+     else
+       0
+     end
+   end 
+   def find_players_with_batting_data_by_year(batting_year)
+     players=BattingStat.where('batting_year=?', batting_year).order('player_id asc').select("player_id").all
    end
 end

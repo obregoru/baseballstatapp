@@ -3,15 +3,16 @@
 <table class='stats'>
   <tr>
     <th>Player</th>
+	<th>Team</th>
 	<th>Year</th>
-    <th>At bats</th>
-    <th>Hits</th>
-    <th>Doubles</th>
-    <th>Triples</th>
-    <th>Home runs</th>
-    <th>Runs batted</th>
-	<th>Batting average</th>
-	<th>Slugging %</th>
+    <th>AB</th>
+    <th>H</th>
+    <th>2B</th>
+    <th>3B</th>
+    <th>HRI</th>
+    <th>RBI</th>
+	<th>Bat Avg</th>
+	<th>Slug %</th>
     <th></th>
     <th></th>
     <th></th>
@@ -20,6 +21,7 @@
 <% @batting_stats.each do |batting_stat| %>
   <tr>
 	   <td> <%= link_to( batting_stat.player.first_and_last_name, player_path(batting_stat.player_id) )%></td>
+	   	  <td> <%= link_to( batting_stat.team.team_name, team_path(batting_stat.team_id) )%></td>
 	<td><%= batting_stat.batting_year %></td> 
     <td><%= batting_stat.at_bats %></td>
     <td><%= batting_stat.hits %></td>

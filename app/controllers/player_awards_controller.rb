@@ -35,6 +35,23 @@ class PlayerAwardsController < ApplicationController
       end 
     end
   end
+  
+ 
+   
+  Player.includes(:batting_stats).each do |p|
+   # puts BattingStat.new.find_prior_year_and_next_year(p.batting_stat.batting_year, p.id)
+   puts '--- analyzing player ----'
+   p.batting_stats.each do |b|
+       puts 'Stats ' +  b.to_yaml
+       
+     end
+    
+     
+  end
+ batting_year = 2010
+  BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
+    puts 'change since previous year >>>>>>>> ' + BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id)
+  end  
    
       redirect_to '/player_awards'
 

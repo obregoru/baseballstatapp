@@ -31,6 +31,7 @@ test 'create teams' do
 end
 
 test 'find the triple crown winner via factory' do
+  #todo - do something with this factory
   @batting_stats=FactoryGirl.create_list(:batting_stat, 400)
   @batting_stats.each do |b|
     b.batting_average = battingAverage(b.hits, b.at_bats)
@@ -56,15 +57,9 @@ test "stubbing instance methods " do
     battingstat = BattingStat.new
     battingstat.stubs(:hits).returns(batstats)
     assert_equal [1000,1500], battingstat.hits.collect {|b| b.hits}
-    
-    
-    #product = Product.new
-    #product.stubs(:prices).returns(prices)
-    #assert_equal [1000, 2000], product.prices.collect {|p| p.pence}
   end
   
 test 'stubbing an instancee method on all instances ' do
-
    BattingStat.any_instance.stubs(:id).returns(3)
    battingstat = BattingStat.new
    assert_equal 3, battingstat.id
@@ -76,9 +71,6 @@ test 'mock for an instance' do
   BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
   assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
 end
-
-
-
 
 test 'find Triple Crown winner' do
   

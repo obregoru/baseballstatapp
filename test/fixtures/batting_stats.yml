@@ -2,6 +2,7 @@ BobbyAbreu:
   id: 1
   league_id: 1
   player_id: 2
+  team_id: 1
   batting_year: 2011
   at_bats: 55
   hits: 171
@@ -16,6 +17,7 @@ HomerBailey:
   id: 2
   league_id: 2
   player_id: 1
+  team_id: 2
   batting_year: 2012
   at_bats: 70
   hits: 8
@@ -30,6 +32,7 @@ TripleCrown:
   id: 3
   league_id: 1
   player_id: 2
+  team_id: 2
   batting_year: 2012
   at_bats: 900
   hits: 900

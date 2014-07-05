@@ -20,12 +20,14 @@
     <%= f.label :batting_year %><br />
     <%= f.number_field :batting_year %>
   </div>
-  
-  
   <div class="field">
-    <%= f.label :league_id %><br />
-    <%= f.number_field :league_id %>
-  </div>
+   <%= f.label :league %><br />
+   <%= f.collection_select(:league_id,  League.find(:all), :id,:league_name, {:include_blank=>'Select a League',:selected=>@batting_stat.league_id})%>
+ </div>
+  <div class="field">  
+	  <%= f.label :team_id %><br/>
+      <%= f.collection_select(:team_id,  Team.find(:all), :id,:team_name,{:include_blank=>'Select a Team',:selected=>@batting_stat.team_id} )%>
+  </div>	  
   <div class="field">
     <%= f.label :at_bats %><br />
     <%= f.number_field :at_bats %>

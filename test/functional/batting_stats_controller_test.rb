@@ -30,7 +30,20 @@ class BattingStatsControllerTest <ActionController::TestCase
   test 'should create batting_stat' do
     
     assert_difference('BattingStat.count') do
-      assert post :create, batting_stat: {player_id: 2, at_bats:10, hits: 5,doubles: 2, triples: 1, home_runs:5, runs_batted:8 }
+      assert post :create, batting_stat: {
+        player_id: 2, 
+        at_bats:10, 
+        hits: 5,
+        doubles: 2, 
+        triples: 1, 
+        home_runs: 5, 
+        runs_batted: 8, 
+        batting_year: 1999, 
+        league_id: 2, 
+        team_id: 2, 
+        batting_average: 0.123, 
+        slugging_percentage: 0.432 
+      }
     end
     assert_redirected_to batting_stat_path(assigns(:batting_stat)), 'Redirected to batting_stats_path'
     assert_equal 'Batting stat was successfully created.',flash[:notice]

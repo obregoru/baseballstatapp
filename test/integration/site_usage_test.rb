@@ -72,6 +72,8 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         click_link('New Batting stat')
         assert page.has_content?('New batting_stat')
         select('Bobby Abreu', :from =>'batting_stat[player_id]')
+        select('American League', :from =>'batting_stat[league_id]')
+        select('New York Yankees', :from =>'batting_stat[team_id]')
         fill_in('Batting year', :with => '2014')
         fill_in('At bats', :with => 100)
         fill_in('Hits', :with=>80)

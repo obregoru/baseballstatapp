@@ -2,7 +2,7 @@ class BattingStatsController < ApplicationController
   # GET /batting_stats
   # GET /batting_stats.json
   def index
-    @batting_stats = BattingStat.includes(:player).all
+    @batting_stats = BattingStat.includes(:player,:team).all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class BattingStatsController < ApplicationController
   # GET /batting_stats/1
   # GET /batting_stats/1.json
   def show
-    @batting_stat = BattingStat.find(params[:id])
+    @batting_stat = BattingStat.includes(:team).find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

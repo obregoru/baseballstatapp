@@ -23,19 +23,21 @@
 <table class='stats'>
   <tr>
 	<th>Year</th>
-    <th>At bats</th>
-    <th>Hits</th>
-    <th>Doubles</th>
-    <th>Triples</th>
-    <th>Home runs</th>
-    <th>Runs batted</th>
-	<th>Batting average</th>
-	<th>Slugging %</th>
+	<th>Team</th>
+    <th>AB</th>
+    <th>H</th>
+    <th>2B</th>
+    <th>3B</th>
+    <th>HR</th>
+    <th>RBI</th>
+	<th>Bat Avb</th>
+	<th>Slug %</th>
   </tr>
   
 <% @stats.each do |s|%>
 <tr>
 	<td><%= s.batting_year %></td> 
+	<td><%= link_to( s.team.team_name, team_path(s.team_id) )%></td>
     <td><%= s.at_bats %></td>
     <td><%= s.hits %></td>
     <td><%= s.doubles %></td>

@@ -4,8 +4,11 @@ class TeamTest < ActiveSupport::TestCase
   should belong_to(:league)
   should have_many(:players)  
   should have_many(:photos)
+  should have_many(:batting_stats)
+  
   should validate_presence_of(:team_name)
   should validate_presence_of(:league_id)
+  
   should_not allow_mass_assignment_of(:created_at)
   should_not allow_mass_assignment_of(:updated_at)
   
