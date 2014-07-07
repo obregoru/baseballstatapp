@@ -82,4 +82,14 @@ class BattingStatTest < ActiveSupport::TestCase
      puts 'Getting changes piro end  xxxxxxxxxxxxxxxxxxxxxxxx'
   
  end
+ 
+ #2,2012
+ 
+ test 'get team stats for slugging percentage for the  year' do
+   team_id = 2
+   batting_year = 2012
+   puts '+++++++++++ getting slug pct for team ++++++++'
+   BattingStat.new.get_sum_team_batting_stats(team_id, batting_year).to_yaml
+    puts '+++++++++++ getting slug pct for team ++++++++'
+ end 
 end

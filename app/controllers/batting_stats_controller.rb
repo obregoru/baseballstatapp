@@ -1,4 +1,9 @@
 class BattingStatsController < ApplicationController
+  
+  before_filter :authenticate_user!,
+     :only => [:destroy, :edit, :new, :create]
+     
+     
   # GET /batting_stats
   # GET /batting_stats.json
   def index

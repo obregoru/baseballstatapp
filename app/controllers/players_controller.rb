@@ -1,4 +1,8 @@
 class PlayersController < ApplicationController
+  
+  before_filter :authenticate_user!,
+     :only => [:destroy, :edit, :new, :create]
+     
   # GET /players
   # GET /players.json
   def index

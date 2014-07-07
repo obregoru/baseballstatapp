@@ -10,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
    <%= f.label :league %><br />
    <%= f.collection_select(:league_id,  League.find(:all), :id,:league_name, {:include_blank=>'Select a League',:selected=>@player_award.league_id})%>

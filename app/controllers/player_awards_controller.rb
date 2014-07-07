@@ -1,6 +1,9 @@
 require_relative '../../lib/BaseballStats.rb'
 
 class PlayerAwardsController < ApplicationController
+  
+  before_filter :authenticate_user!,
+     :only => [:destroy, :edit, :new, :create, :create_awards]
   # GET /player_awards
   # GET /player_awards.json
   include BaseballStats
@@ -15,7 +18,44 @@ class PlayerAwardsController < ApplicationController
       bs.save
     end
 =end  
+    #update stats
     
+    
+    #Validation failed: Award year can't be blank, Award year is not a number, Award year should be a four-digit year
+    
+    PlayerAward.destroy_all
+    batting_year = 2012
+     BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
+        puts 'updating batting stats for player >>>>>>>> ' +  bs.player_id.to_s
+       BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id)
+    end  
+    
+    #most imporoved award
+    most_improved = BattingStat.new.find_highest_batting_average_diff_by_year(batting_year)
+    if !(most_improved.nil?)
+      award=PlayerAward.new
+      award.league_id=most_improved.league_id
+      award.award_name= batting_year.to_s + ' Most Improved Batting Average'
+      award.player_id = most_improved.player_id
+      award.award_year = batting_year 
+      begin
+        award.save!
+      rescue Exception =>e
+        raise e.to_s
+      end
+    end
+    
+    #get_slugging_percentage_for_team(team_id, year)
+    year=2012
+    team_id=1
+    team_slugging_percentage=BattingStat.new.get_sum_team_batting_stats(team_id, year)
+    if !(team_slugging_percentage.nil?)
+      award=PlayerAward.new
+      award.league_id=team_slugging_percentage.league_id
+      award.award_name= batting_year.to_s + ' Team Slugging Percentage: ' + 0
+      award.player_id = most_improved.player_id
+      award.award_year = batting_year 
+    end
     
     (1..2).each do |league|
     (2005..2012).each do |batting_year|
@@ -38,22 +78,10 @@ class PlayerAwardsController < ApplicationController
   
  
    
-  Player.includes(:batting_stats).each do |p|
-   # puts BattingStat.new.find_prior_year_and_next_year(p.batting_stat.batting_year, p.id)
-   puts '--- analyzing player ----'
-   p.batting_stats.each do |b|
-       puts 'Stats ' +  b.to_yaml
-       
-     end
-    
-     
-  end
- batting_year = 2010
-  BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
-    puts 'change since previous year >>>>>>>> ' + BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id)
-  end  
-   
-      redirect_to '/player_awards'
+
+
+ 
+      redirect_to '/player_awards', :notice=>'Awards created'
 
   end
   def index

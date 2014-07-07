@@ -8,8 +8,19 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
+
+	
 <div class="wrapper">
+	
 <div class="top_banner">
+	<div id="user_nav" style="float:right;">
+	  <% if user_signed_in? %>
+	    Signed in as <%= current_user.email %>. Not you?
+	    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+	  <% else %>
+	    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+	  <% end %>
+	</div>
 <span class="top_banner_logo" ><%= link_to(image_tag('logo-tdd.png', :alt=>'Rails & TDD',:title=>"Click here to return home"), "/")%></span><span class="menu_nav"><%= link_to "Leagues", leagues_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Teams", teams_path%>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Players", players_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -20,6 +31,8 @@
 <div>
 <div class="the_content">
 <span style="height:50px">
+
+    <p class="alert"><%= alert %></p>
 <%= yield %>
 </div>
 </div>

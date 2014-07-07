@@ -2,6 +2,9 @@ require 'test_helper'
 
 class SiteUsageTest < ActionDispatch::IntegrationTest
   #initial tests
+  include Warden::Test::Helpers
+  fixtures :users
+  
   should 'visit home page' do
     visit('/')
   end
@@ -67,6 +70,8 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
       end   
     end 
     test 'create batting stats' do
+      @user=User.find(1)
+      login_as(@user, :scope=>:user)
       assert_difference('BattingStat.count', 1) do
         visit('/batting_stats')
         click_link('New Batting stat')
@@ -84,6 +89,7 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         fill_in('Batting average',  :with=>BaseballStats.battingAverage(80, 100))
         fill_in('Slugging percentage', :with =>BaseballStats.sluggingPercentage(80, 70, 60, 50, 100))
         click_on('Create Batting stat')
+        logout(:user)
       end   
     end     
     test 'create player award' do
@@ -132,5 +138,12 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         click_on('Create Photo')
       end
     end
+  
+    test 'create all player award' do
+      assert_difference('PlayerAward.count', 1) do
+        visit('/create_awards')
+        assert page.has_content?('Awards created')
+      end   
+    end 
 
 end

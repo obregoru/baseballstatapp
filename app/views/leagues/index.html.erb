@@ -4,20 +4,25 @@
   <tr>
     <th>League name</th>
     <th></th>
+<% if user_signed_in? %>
     <th></th>
     <th></th>
+<% end %>
   </tr>
 
 <% @leagues.each do |league| %>
   <tr>
     <td><%= league.league_name %></td>
     <td><%= link_to 'Show', league %></td>
+<% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_league_path(league) %></td>
     <td><%= link_to 'Destroy', league, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if user_signed_in? %>
 <%= link_to 'New League', new_league_path %>
+<% end %>

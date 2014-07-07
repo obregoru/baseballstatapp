@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140703205851) do
+ActiveRecord::Schema.define(:version => 20140706224041) do
 
   create_table "batting_stats", :force => true do |t|
     t.integer  "player_id"
@@ -22,13 +22,15 @@ ActiveRecord::Schema.define(:version => 20140703205851) do
     t.integer  "triples"
     t.integer  "home_runs"
     t.integer  "runs_batted"
-    t.datetime "created_at",                                        :null => false
-    t.datetime "updated_at",                                        :null => false
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
     t.integer  "batting_year"
     t.integer  "league_id"
-    t.decimal  "batting_average",     :precision => 3, :scale => 2
-    t.decimal  "slugging_percentage", :precision => 3, :scale => 2
+    t.decimal  "batting_average",            :precision => 3, :scale => 2
+    t.decimal  "slugging_percentage",        :precision => 3, :scale => 2
     t.integer  "team_id"
+    t.decimal  "batting_average_change",     :precision => 3, :scale => 2
+    t.decimal  "batting_average_difference", :precision => 3, :scale => 2
   end
 
   create_table "batting_stats_import", :id => false, :force => true do |t|
@@ -104,5 +106,23 @@ ActiveRecord::Schema.define(:version => 20140703205851) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",                  :default => "", :null => false
+    t.string   "encrypted_password",     :default => "", :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0,  :null => false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

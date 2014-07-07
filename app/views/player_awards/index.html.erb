@@ -1,5 +1,7 @@
 <h1>Listing player_awards</h1>
-
+<% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+<% end -%>
 <table>
   <tr>
     <th>League</th>
@@ -7,8 +9,10 @@
     <th>Award name</th>
     <th>Player</th>
     <th></th>
+<% if user_signed_in? %>
     <th></th>
     <th></th>
+<% end %>
   </tr>
 
 <% @player_awards.each do |player_award| %>
@@ -18,13 +22,18 @@
     <td><%= player_award.award_name %></td>
 	<td><%= link_to( player_award.player.first_and_last_name, player_path(player_award.player_id) )%></td>
     <td><%= link_to 'Show', player_award %></td>
+<% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_player_award_path(player_award) %></td>
     <td><%= link_to 'Destroy', player_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
+<% if user_signed_in? %>
 <%= button_to "Create Awards",create_awards_path, :method => :get %>
-
 <br />
-
 <%= link_to 'New Player award', new_player_award_path %>
+<% end %>
+
+
+

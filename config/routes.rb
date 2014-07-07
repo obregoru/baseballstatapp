@@ -1,5 +1,7 @@
 Tdd1::Application.routes.draw do
    
+  devise_for :users
+
   match 'create_awards' => 'player_awards#create_awards', :via => :get
   
   resources :player_awards

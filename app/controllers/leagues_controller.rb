@@ -1,5 +1,6 @@
 class LeaguesController < ApplicationController
-
+  before_filter :authenticate_user!,
+     :only => [:destroy, :edit, :new, :create]
   # GET /leagues
   # GET /leagues.json
   def index

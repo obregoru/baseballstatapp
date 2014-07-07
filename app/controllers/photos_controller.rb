@@ -1,5 +1,7 @@
 class PhotosController < ApplicationController
    before_filter :load_imageable
+   before_filter :authenticate_user!,
+      :only => [:destroy, :edit, :new, :create]
   # GET /photos
   # GET /photos.json
   def index

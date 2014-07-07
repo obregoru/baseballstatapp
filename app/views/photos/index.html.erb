@@ -8,8 +8,10 @@
     <th>Imageable id</th>
     <th>Imageable type</th>
     <th></th>
+<% if user_signed_in? %>
     <th></th>
     <th></th>
+<% end %>
   </tr>
 
 <% @photos.each do |photo| %>
@@ -20,8 +22,10 @@
     <td><%= photo.imageable_id %></td>
     <td><%= photo.imageable_type %></td>
     <td><%= link_to 'Show', photo %></td>
+<% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
     <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
   </tr>
 <% end %>
 </table>

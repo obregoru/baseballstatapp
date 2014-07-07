@@ -6,8 +6,10 @@
     <th>Team name</th>
     <th>Owner name</th>
     <th></th>
+<% if user_signed_in? %>
     <th></th>
     <th></th>
+<% end %>
   </tr>
 
 <% @teams.each do |team| %>
@@ -15,13 +17,17 @@
     <td><%= link_to( team.league.league_name, league_path(team.league_id) )%></td>
     <td><%= team.team_name %></td>
     <td><%= team.owner_name %></td>
+
     <td><%= link_to 'Show', team %></td>
+<% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if user_signed_in? %>
 <%= link_to 'New Team', new_team_path %>
+<% end %>

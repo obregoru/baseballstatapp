@@ -12,10 +12,13 @@
     <th>HRI</th>
     <th>RBI</th>
 	<th>Bat Avg</th>
+	<th>BA Diff</th>
 	<th>Slug %</th>
     <th></th>
+<% if user_signed_in? %>
     <th></th>
     <th></th>
+<%end %>
   </tr>
 
 <% @batting_stats.each do |batting_stat| %>
@@ -30,14 +33,18 @@
     <td><%= batting_stat.home_runs %></td>
     <td><%= batting_stat.runs_batted %></td>
 	<td><%= batting_stat.batting_average %></td>
+	<td><%= batting_stat.batting_average_difference %></td>
 	<td><%= batting_stat.slugging_percentage %></td>
     <td><%= link_to 'Show', batting_stat %></td>
+<% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_batting_stat_path(batting_stat) %></td>
     <td><%= link_to 'Destroy', batting_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if user_signed_in? %>
 <%= link_to 'New Batting stat', new_batting_stat_path %>
+<% end %>
