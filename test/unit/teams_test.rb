@@ -38,4 +38,15 @@ class TeamTest < ActiveSupport::TestCase
     assert_equal 1, Team.count, 'Destroyed team 2'
   end
   
+  test 'update notes' do
+    year=2012
+    team_id=2
+    team_slugging_percentage=BattingStat.new.get_sum_team_batting_stats(team_id, year)
+    assert team_slugging_percentage
+    if !(team_slugging_percentage.nil?)
+      team=Team.find(team_id)
+      team.notes= 'Team slugging percentage ' + team_slugging_percentage.to_s
+      refute team.save
+    end
+  end
 end

@@ -1,10 +1,10 @@
 class TeamsController < ApplicationController
   before_filter :authenticate_user!,
-     :only => [:destroy, :edit, :new, :create]
+     :only => [:destroy, :edit, :new, :create, :update]
   # GET /teams
   # GET /teams.json
   def index
-    @teams = Team.includes(:league).all
+    @teams = Team.includes(:league).order('team_name asc').paginate(:page=>params[:page], :per_page =>20)
 
     respond_to do |format|
       format.html # index.html.erb

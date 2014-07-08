@@ -1,9 +1,12 @@
 require 'test_helper'
 class BattingStatsControllerTest <ActionController::TestCase
 
+fixtures :users
+
   def setup
     assert @battingstat=BattingStat.new,'Setup'
     @batting_stat=batting_stats(:BobbyAbreu)
+    @user = User.find(1)
   end
   
   def teardown
@@ -28,7 +31,8 @@ class BattingStatsControllerTest <ActionController::TestCase
   end
   
   test 'should create batting_stat' do
-    
+
+    sign_in @user
     assert_difference('BattingStat.count') do
       assert post :create, batting_stat: {
         player_id: 2, 
@@ -47,14 +51,17 @@ class BattingStatsControllerTest <ActionController::TestCase
     end
     assert_redirected_to batting_stat_path(assigns(:batting_stat)), 'Redirected to batting_stats_path'
     assert_equal 'Batting stat was successfully created.',flash[:notice]
+    sign_out @user
   end
   
   test 'should update batting_stat' do
+    sign_in @user
     put :update, :id=>@batting_stat, :batting_stat=>{:hits=>100}
     assert_equal 100, assigns(:batting_stat).hits
   end
   
   test 'should destroy batting_stat' do
+    sign_in @user
     assert_difference('BattingStat.count', -1) do
       delete :destroy, id: @batting_stat.id
     end

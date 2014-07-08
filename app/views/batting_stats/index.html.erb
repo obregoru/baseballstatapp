@@ -1,4 +1,4 @@
-<h1>Listing batting_stats</h1>
+<h1>Listing Batting Stats</h1>
 
 <table class='stats'>
   <tr>
@@ -23,7 +23,7 @@
 
 <% @batting_stats.each do |batting_stat| %>
   <tr>
-	   <td> <%= link_to( batting_stat.player.first_and_last_name, player_path(batting_stat.player_id) )%></td>
+	   <td> <%= link_to( batting_stat.player.last_and_first_name, player_path(batting_stat.player_id) )%></td>
 	   	  <td> <%= link_to( batting_stat.team.team_name, team_path(batting_stat.team_id) )%></td>
 	<td><%= batting_stat.batting_year %></td> 
     <td><%= batting_stat.at_bats %></td>
@@ -43,6 +43,7 @@
   </tr>
 <% end %>
 </table>
+<%= will_paginate @batting_stats %>
 
 <br />
 <% if user_signed_in? %>

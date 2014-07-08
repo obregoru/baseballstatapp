@@ -1,8 +1,10 @@
 require 'test_helper'
 
 class TestdbsControllerTest < ActionController::TestCase
+  fixtures :users
   setup do
     @testdb = testdbs(:one)
+    
   end
 
   test "should get index" do

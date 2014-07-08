@@ -1,10 +1,9 @@
-<h1>Listing players</h1>
+<h1>Listing Players</h1>
 
 <table>
   <tr>
+	<th>Player</th>
     <th>Team</th>
-    <th>Player</th>
-    <th></th>
 <% if user_signed_in? %>
     <th></th>
     <th></th>
@@ -13,9 +12,8 @@
 
 <% @players.each do |player| %>
   <tr>
+    <td><%= link_to(player.last_and_first_name, player) %></td>
 	<td><%= link_to( player.team.team_name, team_path(player.team.id) )%></td>
-    <td><%= player.first_and_last_name %></td>
-    <td><%= link_to 'Show', player %></td>
 <% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_player_path(player) %></td>
     <td><%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -23,7 +21,7 @@
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @players %>
 <br />
 <% if user_signed_in? %>
 <%= link_to 'New Player', new_player_path %>

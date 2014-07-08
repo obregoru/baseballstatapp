@@ -1,12 +1,12 @@
 class PlayersController < ApplicationController
   
   before_filter :authenticate_user!,
-     :only => [:destroy, :edit, :new, :create]
+     :only => [:destroy, :edit, :new, :create, :update]
      
   # GET /players
   # GET /players.json
   def index
-    @players = Player.includes(:team).all
+    @players = Player.includes(:team).order('last_name, first_name').paginate(:page=>params[:page], :per_page =>20)
 
     respond_to do |format|
       format.html # index.html.erb

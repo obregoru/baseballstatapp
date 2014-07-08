@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
    before_filter :load_imageable
    before_filter :authenticate_user!,
-      :only => [:destroy, :edit, :new, :create]
+      :only => [:destroy, :edit, :new, :create,:update]
   # GET /photos
   # GET /photos.json
   def index
@@ -9,9 +9,9 @@ class PhotosController < ApplicationController
   
    @imageable = find_imageable
    @photos= if !(@imageable.nil?)
-     @imageable.photos
+     @imageable.photos.paginate(:page=>params[:page], :per_page =>10)
    else
-     Photo.all
+     Photo.paginate(:page=>params[:page], :per_page =>10)
    end
    
     respond_to do |format|

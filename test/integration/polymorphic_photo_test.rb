@@ -3,8 +3,6 @@ require 'test_helper'
 class PolymorphicPhotoTest<ActionDispatch::IntegrationTest
 fixtures  :leagues, :teams, :photos
 
-
-
   test 'create poloymorphic league picture' do
     league=League.find(1)
     assert league.photos.create(:file_name=>'allogo3.jpg', :photo_name=>'American League Logo (small)')

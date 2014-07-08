@@ -1,10 +1,12 @@
 require 'test_helper'
 
 class PlayerAwardsControllerTest<ActionController::TestCase
+  fixtures :users
   
   def setup
     assert @player_award=PlayerAward.new, 'setup'
     @player_award = player_awards(:GoldenBall)
+    @user = User.first
   end
   
   test 'should get index' do
@@ -25,7 +27,7 @@ class PlayerAwardsControllerTest<ActionController::TestCase
   end
   
   test 'should create player award' do
-    
+    sign_in @user
     assert_difference('PlayerAward.count') do
       assert post :create, player_award: {league_id: 1, award_year: 1997, award_name: "Golden Bat", player_id: 1}
     end

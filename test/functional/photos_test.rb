@@ -1,9 +1,10 @@
 require 'test_helper'
 class PhotosControllerTest <ActionController::TestCase
-  
+  fixtures :users
   def setup
     assert @photo=Photo.new, 'Setup'
     @photo=photos(:NewYorkYankees)
+     @user = User.first
   end
   
   def teardown
@@ -28,7 +29,7 @@ class PhotosControllerTest <ActionController::TestCase
   end
   
   test 'should create photo' do
-
+    sign_in @user
     assert_difference('Photo.count') do
       post :create,  photo: {photo_name: 'New photo', file_name:'aab.jpg',imageable_id: 1, imageable_type:"Leagues"}
     end
@@ -37,12 +38,14 @@ class PhotosControllerTest <ActionController::TestCase
   end
   
   test 'should update photo' do
+    sign_in @user
     put :update, :id=>photos(:NewYorkYankees), :photo=>{:file_name=>'xyz.jpg', :photo_name=>'test'}
     assert_equal 'xyz.jpg', assigns(:photo).file_name
     
   end
   
   test 'should destroy photo' do
+    sign_in @user
     assert_difference('Photo.count', -1) do
       delete :destroy, id: @photo.id
     end

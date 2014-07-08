@@ -1,5 +1,11 @@
 require 'test_helper'
 class PlayerMailerControlerTest <ActiveSupport::TestCase
+  fixtures :users
+  def setup 
+    @user=User.first
+  end
+  
+  
   
 test 'should ' do
 

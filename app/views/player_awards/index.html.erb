@@ -1,14 +1,13 @@
-<h1>Listing player_awards</h1>
+<h1>Listing Player Awards</h1>
 <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
 <% end -%>
 <table>
   <tr>
+    <th>Award Year</th>
+    <th>Award Name</th>
     <th>League</th>
-    <th>Award year</th>
-    <th>Award name</th>
     <th>Player</th>
-    <th></th>
 <% if user_signed_in? %>
     <th></th>
     <th></th>
@@ -17,11 +16,10 @@
 
 <% @player_awards.each do |player_award| %>
   <tr>
-	 <td><%= link_to( player_award.league.league_name , league_path(player_award.league_id) )%></td>
-    <td><%= player_award.award_year %></td>
-    <td><%= player_award.award_name %></td>
+	<td><%= player_award.award_year %></td>
+	<td><%= link_to( player_award.award_name, player_award) %></td>
+	<td><%= link_to( player_award.league.league_name , league_path(player_award.league_id) )%></td>
 	<td><%= link_to( player_award.player.first_and_last_name, player_path(player_award.player_id) )%></td>
-    <td><%= link_to 'Show', player_award %></td>
 <% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_player_award_path(player_award) %></td>
     <td><%= link_to 'Destroy', player_award, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,6 +27,8 @@
   </tr>
 <% end %>
 </table>
+<%= will_paginate @player_awards %>
+
 <% if user_signed_in? %>
 <%= button_to "Create Awards",create_awards_path, :method => :get %>
 <br />

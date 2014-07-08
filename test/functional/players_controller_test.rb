@@ -1,11 +1,12 @@
 require 'test_helper'
 class PlayersControllerTest< ActionController::TestCase
+  fixtures :users
   
   def setup
     assert @player=Player.new, 'Setup'
     @player=players(:HomerBailey)
     FactoryGirl.reload
-   
+    @user=User.first
   end
   
   def teardown
@@ -30,6 +31,7 @@ class PlayersControllerTest< ActionController::TestCase
   end
   
   test 'should create Player' do
+    sign_in @user
     assert_difference('Player.count') do
       post :create, player: {team_id: 1, first_name: 'Ruben', last_name: 'Obregon'}
     end
@@ -38,11 +40,13 @@ class PlayersControllerTest< ActionController::TestCase
   end
   
   test 'should update player' do
+    sign_in @user
     put :update, :id=> players(:HomerBailey), :player=>{:first_name=>'H.'}
     assert_equal 'H.', assigns(:player).first_name
   end
 
   test 'should destroy player' do
+    sign_in @user
     assert_difference('Player.count', -1) do
       delete :destroy, id: @player.id
     end

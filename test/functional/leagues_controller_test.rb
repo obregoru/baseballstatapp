@@ -1,10 +1,10 @@
 require 'test_helper'
 class LeaguesControllerTest < ActionController::TestCase
-  
+  fixtures :users
   def setup
     assert  @league = League.new, 'Setup'
     @league=leagues(:nl)
-    
+    @user=User.first
   end
   
   def teardown
@@ -30,21 +30,24 @@ class LeaguesControllerTest < ActionController::TestCase
   end
   
   test 'should create League' do
-    assert_difference('League.count') do
+    sign_in @user
+    assert_difference('League.count',1) do
       post :create, league: {league_name: 'Other League'}
     end
     assert assigns(:league)
     assert_redirected_to league_path(assigns(:league)), 'Redirected to league_path'
     assert_equal 'League was successfully created.', flash[:notice]
-    
+    sign_out @user
   end
   
   test "should update league" do
+    sign_in @user
     put :update, :id=> leagues(:al), :league=>{:league_name => 'American League Updated'}
     assert_equal "American League Updated", assigns(:league).league_name
   end
 
   test "should destroy league" do 
+    sign_in @user
     assert_difference('League.count', -1) do
       delete :destroy, id: @league.id
     end
@@ -52,8 +55,9 @@ class LeaguesControllerTest < ActionController::TestCase
   end
   
   test 'set a custom header' do 
+    sign_in @user
     @request.env["CUSTOM_HEADER"] = "bar"
-    assert_difference('League.count') do
+    assert_difference('League.count',1) do
       post :create, league: {league_name: 'Another League'}
     end
     assert_redirected_to league_path(assigns(:league)), 'Redirected to league_path'

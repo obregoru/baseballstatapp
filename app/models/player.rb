@@ -9,4 +9,8 @@ class Player < ActiveRecord::Base
   def first_and_last_name
      "#{first_name} #{last_name}"
   end
+  def last_and_first_name
+     "#{last_name}, #{first_name}"
+  end
+  
 end

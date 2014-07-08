@@ -1,10 +1,10 @@
 class LeaguesController < ApplicationController
   before_filter :authenticate_user!,
-     :only => [:destroy, :edit, :new, :create]
+     :only => [:destroy, :edit, :new, :create, :update]
   # GET /leagues
   # GET /leagues.json
   def index
-    @leagues = League.all
+    @leagues = League.paginate(:page=>params[:page], :per_page =>10)
 
     respond_to do |format|
       format.html # index.html.erb

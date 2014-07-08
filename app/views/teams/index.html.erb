@@ -1,11 +1,10 @@
-<h1>Listing teams</h1>
+<h1>Listing Teams</h1>
 
 <table>
   <tr>
-    <th>League</th>
     <th>Team name</th>
+    <th>League</th>
     <th>Owner name</th>
-    <th></th>
 <% if user_signed_in? %>
     <th></th>
     <th></th>
@@ -14,11 +13,9 @@
 
 <% @teams.each do |team| %>
   <tr>
-    <td><%= link_to( team.league.league_name, league_path(team.league_id) )%></td>
-    <td><%= team.team_name %></td>
+    <td><%= link_to(team.team_name, team) %></td>
+	<td><%= link_to( team.league.league_name, league_path(team.league_id) )%></td>
     <td><%= team.owner_name %></td>
-
-    <td><%= link_to 'Show', team %></td>
 <% if user_signed_in? %>
     <td><%= link_to 'Edit', edit_team_path(team) %></td>
     <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,7 +23,7 @@
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @teams %>
 <br />
 <% if user_signed_in? %>
 <%= link_to 'New Team', new_team_path %>

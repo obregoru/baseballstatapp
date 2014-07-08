@@ -1,13 +1,13 @@
 class BattingStatsController < ApplicationController
   
   before_filter :authenticate_user!,
-     :only => [:destroy, :edit, :new, :create]
+     :only => [:destroy, :edit, :new, :create, :update]
      
      
   # GET /batting_stats
   # GET /batting_stats.json
   def index
-    @batting_stats = BattingStat.includes(:player,:team).all
+    @batting_stats = BattingStat.joins(:player).includes(:player,:team).order('last_name, first_name asc, batting_year desc').paginate(:page=>params[:page], :per_page =>20)
 
     respond_to do |format|
       format.html # index.html.erb

@@ -7,17 +7,13 @@ class CalculateStatsTest< ActionDispatch::IntegrationTest
   
 test 'calculate battering average for player using fixtures' do
   player=Player.includes(:batting_stats).where(:last_name=>"Bailey").first
-
   hits=player.batting_stats.first.hits.to_i # 8
   assert_equal(8,hits,'Verifying hits')
   at_bats=player.batting_stats.first.at_bats #70
   assert_equal(70,at_bats,'Verifying at bats')
-
   assert_equal(0.114,battingAverage(hits, at_bats), 'Battting average should be .114')
   
 end
-
-
 
 
 test 'should create list of players' do
@@ -30,22 +26,7 @@ test 'create teams' do
   
 end
 
-test 'find the triple crown winner via factory' do
-  #todo - do something with this factory
-  @batting_stats=FactoryGirl.create_list(:batting_stat, 400)
-  @batting_stats.each do |b|
-    b.batting_average = battingAverage(b.hits, b.at_bats)
-    b.slugging_percentage = sluggingPercentage(b.hits, b.doubles, b.triples, b.home_runs, b.at_bats)
-  end
-  #raise @batting_stats.to_yaml
-  
-  bat_stats =  @batting_stats.sort!
 
-end
-
-
-
-#---
 test 'mock instance on an object' do 
   battingstat=BattingStat.new
   battingstat.expects(:save).returns(true)
@@ -110,14 +91,5 @@ test 'find a single Triple Crown winner and create award and noftify player' do
 end
 
 
-  
-
-# The player that had the highest batting average AND the most home runs AND the most RBI in their league.
-
-#award 'golden bat' award to highest home run in each league
-
-#award 'Slugger' to highest slugging percentage
-
-#award 'triple crown' to leagues' highest batting average and most home runs and most RBI in their league
 
 end

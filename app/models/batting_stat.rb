@@ -95,9 +95,11 @@ class BattingStat < ActiveRecord::Base
    #Hits - doubles - triples - home runs) + (2 * doubles) + (3 * triples) + (4 * home runs)) / at-bats
    def get_sum_team_batting_stats(team_id, year)
      team_stats=BattingStat.group(:league_id, :team_id, :batting_year)
-     .select("league_id, team_id, batting_year, SUM(hits) as sum_hits, sum(doubles) as sum_doubles, sum(home_runs) as sum_home_runs, sum(at_bats) as sum_at_bats")
+     .select("league_id, team_id, batting_year, SUM(hits) as sum_hits, sum(doubles) as sum_doubles, sum(triples) as sum_triples, sum(home_runs) as sum_home_runs, sum(at_bats) as sum_at_bats")
      .order('team_id')
      .where('team_id=? and batting_year=?', team_id, year).first
+     return team_stats
+ 
    end
    
 end

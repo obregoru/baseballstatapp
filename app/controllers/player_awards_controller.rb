@@ -3,32 +3,22 @@ require_relative '../../lib/BaseballStats.rb'
 class PlayerAwardsController < ApplicationController
   
   before_filter :authenticate_user!,
-     :only => [:destroy, :edit, :new, :create, :create_awards]
+     :only => [:destroy, :edit, :new, :create, :create_awards, :update]
   # GET /player_awards
   # GET /player_awards.json
   include BaseballStats
 
 
   def create_awards
-=begin   
-    BattingStat.all.each do |bs|
-  
-      bs.batting_average = battingAverage(bs.hits, bs.at_bats)
-      bs.slugging_percentage  = sluggingPercentage(bs.hits, bs.doubles, bs.triples, bs.home_runs, bs.at_bats)
-      bs.save
-    end
-=end  
-    #update stats
-    
-    
-    #Validation failed: Award year can't be blank, Award year is not a number, Award year should be a four-digit year
+
     
     PlayerAward.destroy_all
-    batting_year = 2012
+    
+    # update players batting average differences
+    batting_year = 2010
      BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
-        puts 'updating batting stats for player >>>>>>>> ' +  bs.player_id.to_s
        BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id)
-    end  
+     end  
     
     #most imporoved award
     most_improved = BattingStat.new.find_highest_batting_average_diff_by_year(batting_year)
@@ -45,20 +35,24 @@ class PlayerAwardsController < ApplicationController
       end
     end
     
-    #get_slugging_percentage_for_team(team_id, year)
-    year=2012
-    team_id=1
-    team_slugging_percentage=BattingStat.new.get_sum_team_batting_stats(team_id, year)
-    if !(team_slugging_percentage.nil?)
-      award=PlayerAward.new
-      award.league_id=team_slugging_percentage.league_id
-      award.award_name= batting_year.to_s + ' Team Slugging Percentage: ' + 0
-      award.player_id = most_improved.player_id
-      award.award_year = batting_year 
+    #this SHOULD be put else where but kept in since
+    #the challenge wanted all 3 figures as a resul
+    
+    #find a single team's slugging percentage
+    year=2007
+    team_id=29
+    team_stats=BattingStat.new.get_sum_team_batting_stats(team_id, year)
+    if !(team_stats.nil?)
+      slugging_percentage= sluggingPercentage(team_stats.sum_hits.to_i, team_stats.sum_doubles.to_i, team_stats.sum_triples.to_i, team_stats.sum_home_runs.to_i, team_stats.sum_at_bats.to_i)
+      team=Team.find(team_id)
+      team.notes= 'Team slugging percentage ' + slugging_percentage.to_s
+      team.save!
+      
     end
     
+    #find triple crown winner for each league
     (1..2).each do |league|
-    (2005..2012).each do |batting_year|
+    (2011..2012).each do |batting_year|
       triple_crown_winner= BattingStat.new.find_triple_crown_player_by_year_and_league(batting_year,league)
       puts 'triple crown winner ->' + triple_crown_winner.to_yaml
       if !(triple_crown_winner.nil?)
@@ -75,17 +69,11 @@ class PlayerAwardsController < ApplicationController
       end 
     end
   end
-  
- 
-   
-
-
- 
       redirect_to '/player_awards', :notice=>'Awards created'
 
   end
   def index
-    @player_awards = PlayerAward.includes(:player,:league).all
+    @player_awards = PlayerAward.includes(:player,:league).order('award_year desc, award_name asc').paginate(:page=>params[:page], :per_page =>20)
 
     respond_to do |format|
       format.html # index.html.erb

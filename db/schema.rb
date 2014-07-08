@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140706224041) do
+ActiveRecord::Schema.define(:version => 20140708165457) do
 
   create_table "batting_stats", :force => true do |t|
     t.integer  "player_id"
@@ -99,6 +99,7 @@ ActiveRecord::Schema.define(:version => 20140706224041) do
     t.string   "owner_name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "notes"
   end
 
   create_table "testdbs", :force => true do |t|

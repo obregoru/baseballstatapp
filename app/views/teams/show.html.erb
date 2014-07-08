@@ -14,10 +14,14 @@
   <b>Owner name:</b>
   <%= @team.owner_name %>
 </p>
-
+<p>
+	<b>Notes:</b>
+  <%= @team.notes %>
+</p>
 <p><%= link_to 'Add photo',"/teams/#{@team.id}" + '/photos/new' %></p>
 <% @team.photos.each do |p|%>
 <%= image_tag('/images/' + p.file_name)%>
 <% end %>
+<br/>
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

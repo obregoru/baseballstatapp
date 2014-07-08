@@ -1,12 +1,12 @@
 require 'test_helper'
 
 class TeamsControllerTest < ActionController::TestCase
-
+  fixtures :users
   def setup
     assert  @team = Team.new, 'Setup'
     @team=teams(:NewYorkYankees)
     FactoryGirl.reload
-
+    @user=User.first
     
   end
   
@@ -32,6 +32,7 @@ class TeamsControllerTest < ActionController::TestCase
   end
   
   test 'should create Team' do
+    sign_in @user
     assert_difference('Team.count') do
       post :create, team: {league_id: 1, team_name: 'Other Team'}
     end
@@ -40,11 +41,13 @@ class TeamsControllerTest < ActionController::TestCase
   end
   
   test "should update team" do
+    sign_in @user
     put :update, :id=> teams(:NewYorkYankees), :team=>{:team_name => 'Cin Reds'}
     assert_equal "Cin Reds", assigns(:team).team_name
   end
 
   test "should destroy team" do 
+    sign_in @user
     assert_difference('Team.count', -1) do
       delete :destroy, id: @team.id
     end
@@ -52,6 +55,7 @@ class TeamsControllerTest < ActionController::TestCase
   end
   
   test 'set a custom header' do 
+    sign_in @user
     @request.env["CUSTOM_HEADER"] = "bar"
     assert_difference('Team.count') do
       post :create, team: {league_id: 1, team_name: 'Another Team',id: 200}
