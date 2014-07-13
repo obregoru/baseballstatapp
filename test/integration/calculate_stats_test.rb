@@ -17,13 +17,48 @@ end
 
 
 test 'should create list of players' do
+  #todo
+  #demonstrate factory girl here
   @players=FactoryGirl.create_list(:player,400)
 
 end
 
 test 'create teams' do
+  #todo demonstrate factory girl here
     @teams=FactoryGirl.create_list(:team,20)
   
+end
+#todo - do actual test wo mocks
+
+
+
+# simply here for mocking and stubbing demo
+test 'find Triple Crown winner and create award - mock' do
+  battingstat=BattingStat.find(3)
+  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
+  triple_crown_winner=  BattingStat.find_triple_crown_player_by_year_and_league(2012,1)
+  triple_crown_award = PlayerAward.new
+  triple_crown_award.league_id=triple_crown_winner.league_id
+  triple_crown_award.player_id=triple_crown_winner.player_id
+  triple_crown_award.award_year = triple_crown_winner.batting_year
+  triple_crown_award.award_name = 'Triple Crown'
+  assert triple_crown_award.save!, 'saving triple crown award'
+end
+
+test 'find a single Triple Crown winner and create award and noftify player - mock' do
+  battingstat=BattingStat.find(3)
+  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
+  triple_crown_winner=  BattingStat.find_triple_crown_player_by_year_and_league(2012,1)
+  triple_crown_award = PlayerAward.new
+  triple_crown_award.league_id=triple_crown_winner.league_id
+  triple_crown_award.player_id=triple_crown_winner.player_id
+  triple_crown_award.award_year = triple_crown_winner.batting_year
+  triple_crown_award.award_name = 'Triple Crown'
+  player=Player.find(triple_crown_winner.player_id)
+  award=PlayerAward.find(1) 
+  #stub e-mail notifcation - we don't really want to send an e-mail for this test
+  PlayerMailer.stubs(:notify_award).returns(true)
+  assert PlayerMailer.notify_award(:player,:award), 'Checking triple crown mock'
 end
 
 
@@ -45,51 +80,20 @@ test 'stubbing an instancee method on all instances ' do
    battingstat = BattingStat.new
    assert_equal 3, battingstat.id
  end
+ 
 
+ test 'mock for an instance' do
+   battingstat=BattingStat.find(3)
+   BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
+   assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
+ end
 
-test 'mock for an instance' do
-  battingstat=BattingStat.find(3)
-  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
-  assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
-end
-
-test 'find Triple Crown winner' do
+ test 'find Triple Crown winner' do
   
-  battingstat=BattingStat.new
-  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
-  assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
-end
-
-
-test 'find Triple Crown winner and create award' do
-  
-  battingstat=BattingStat.find(3)
-  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
-  triple_crown_winner=  BattingStat.find_triple_crown_player_by_year_and_league(2012,1)
-  triple_crown_award = PlayerAward.new
-  triple_crown_award.league_id=triple_crown_winner.league_id
-  triple_crown_award.player_id=triple_crown_winner.player_id
-  triple_crown_award.award_year = triple_crown_winner.batting_year
-  triple_crown_award.award_name = 'Triple Crown'
-  assert triple_crown_award.save!, 'saving triple crown award'
-end
-
-test 'find a single Triple Crown winner and create award and noftify player' do
-  battingstat=BattingStat.find(3)
-  BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
-  triple_crown_winner=  BattingStat.find_triple_crown_player_by_year_and_league(2012,1)
-  triple_crown_award = PlayerAward.new
-  triple_crown_award.league_id=triple_crown_winner.league_id
-  triple_crown_award.player_id=triple_crown_winner.player_id
-  triple_crown_award.award_year = triple_crown_winner.batting_year
-  triple_crown_award.award_name = 'Triple Crown'
-  player=Player.find(triple_crown_winner.player_id)
-  award=PlayerAward.find(1) 
-  #stub e-mail notifcation - we don't really want to send an e-mail for this test
-  PlayerMailer.stubs(:notify_award).returns(true)
-  assert PlayerMailer.notify_award(:player,:award), 'Checking triple crown mock'
-end
-
-
+   battingstat=BattingStat.new
+   BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)
+   assert_equal battingstat, BattingStat.find_triple_crown_player_by_year_and_league(2012,1), 'Checking triple crown mock'
+ end
+ 
 
 end

@@ -18,7 +18,7 @@ class PlayerTest<ActiveSupport::TestCase
   test "player must have first and last name and league id" do
     player=Player.new
     player.first_name='Bo'
-    refute player.save, 'Cannot save without both a first and last name and league_id'
+    assert !player.save, 'Save without both a first and last name and league_id'
   end
   
   test "save player with team_id, first and last name" do
@@ -26,28 +26,31 @@ class PlayerTest<ActiveSupport::TestCase
     player.team_id=1
     player.first_name='Bo'
     player.last_name='Jackson'
-    assert player.save, 'Saved a player with a first and last name'
+    assert player.save, 'Save a player with a first and last name'
   end
   
   test "find player by last name" do
     player=Player.find_by_last_name("Bailey")
-    assert_equal('Bailey', player.last_name, 'Must return player named "Bailey"')
+    assert_equal('Bailey', player.last_name, 'Return a player named "Bailey"')
   end
   
   test 'update player' do
     player=Player.find(2)
     player.first_name = 'Bob'
-    assert player.save, 'Updated Player first name to bob'
+    assert player.save, 'Update Player first name to Bob'
   end
   
   test 'destroy player' do
     player=Player.find(1)
-    assert player.destroy
-    assert_equal 1, Player.count
+    assert player.destroy, 'Destroy Player'
+    assert !Player.exists?(1), 'Player destroyed'
+    assert_equal 1, Player.count, 'Player count reflects destroy'
   end
   
   test 'player first and last name are returned' do
-    assert player=Player.find(1).first_and_last_name
+    #todo
+    #find record, manually create first and last name, and compare
+    assert player=Player.find(1).first_and_last_name, 'Return first and last name'
     
     
   end

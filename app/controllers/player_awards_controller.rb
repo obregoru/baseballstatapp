@@ -54,7 +54,6 @@ class PlayerAwardsController < ApplicationController
     (1..2).each do |league|
     (2011..2012).each do |batting_year|
       triple_crown_winner= BattingStat.new.find_triple_crown_player_by_year_and_league(batting_year,league)
-      puts 'triple crown winner ->' + triple_crown_winner.to_yaml
       if !(triple_crown_winner.nil?)
         existing_award= PlayerAward.where('award_name = ? and award_year=? and league_id=?', 'Triple Crown',batting_year.to_s, triple_crown_winner.league_id ).first
         if !(existing_award.nil?)

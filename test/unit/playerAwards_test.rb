@@ -19,12 +19,12 @@ end
 
 test "should not save PlayerAward without an award name"  do
    player_award=PlayerAward.new(:award_year=>1996)
-   refute player_award.save
+   assert !player_award.save, 'Save PlayerAward without an award name'
 end
   
 test "should not save PlayerAward without an award year"  do
    player_award=PlayerAward.new(:award_name=>'Golden Ball')
-   refute player_award.save
+   assert !player_award.save, 'Save PlayerAward without an award year'
 end
   
 test "should save PlayerAward with required fields"  do
@@ -33,7 +33,7 @@ test "should save PlayerAward with required fields"  do
    player_award.player_id=1
    player_award.award_year=1997
    player_award.award_name='Golden Ball'
-   assert player_award.save!
+   assert player_award.save!, 'Save PlawerAward with all required fields'
    
 end 
 
@@ -41,7 +41,7 @@ test "should not save PlayerAward with a non-numeric award year"  do
    player_award=PlayerAward.new
    player_award.award_year="abcd"
    player_award.award_name='Golden Ball'
-   refute player_award.save
+   assert !player_award.save, 'Save PlayerAward with a non-numeric year'
    
 end 
 
@@ -49,13 +49,14 @@ test 'upadate PlayerAward' do
   player_award=PlayerAward.find(1)
   player_award.award_name='Updated Award'
   player_award.award_year=1999
-  assert player_award.save!, 'Updated PlayerAward award name and award year'
+  assert player_award.save!, 'Update PlayerAward award name and award year'
 end
 
 test 'destroy PlayerAward' do
   player_award=PlayerAward.find(1)
-  assert player_award.destroy
-  assert_equal 0, PlayerAward.count 
+  assert player_award.destroy, 'Destroy PlayerAward with ID of 1'
+  assert !PlayerAward.exists?(1), 'Check if Player Award 1 still exists'
+  assert_equal 0, PlayerAward.count , 'Verify PlayerAward count'
 end
 
 

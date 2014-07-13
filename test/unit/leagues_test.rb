@@ -16,7 +16,7 @@ class LeagueTest< ActiveSupport::TestCase
   
   test 'league must have a league name' do
     league = League.new
-    refute league.save, 'Saved the league without a name'
+    refute league.save, 'Saved a league without a name'
   end
   
   test 'league saves with a name' do
@@ -28,13 +28,14 @@ class LeagueTest< ActiveSupport::TestCase
   test 'update League' do
     league=League.find(1)
     league.league_name = 'International League'
-    assert league.save, 'Updated photo name to International League'
+    assert league.save, 'Update the league name to International League'
   end
   
-  test 'destroy league' do
+  test 'Destroy league record 1' do
     league=League.find(1)
-    assert league.destroy
-    assert_equal 1, League.count
+    assert league.destroy, 'Delete the league record with id of 1'
+    assert !League.exists?(1), 'Check if league still exists'   
+    assert_equal 1, League.count, 'Verify new league count'
   end
   
 end

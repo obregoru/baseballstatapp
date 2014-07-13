@@ -27,69 +27,60 @@ class BattingStatTest < ActiveSupport::TestCase
 
   test 'destroy batting stats' do
     batstats=BattingStat.find(1)
-    assert batstats.destroy
-    assert_equal 2, BattingStat.count
+    assert batstats.destroy, 'Destory batting stat record'
+    assert !BattingStat.exists?(1), 'Batting stat does not exist'
+    assert_equal 2, BattingStat.count, 'Verify batting stat count is 2'
   end
 
   
   test 'gets batter with max batting average by year and league' do
-    player_with_highest_batting_avg = BattingStat.new.find_max_batting_avg_by_year_and_league(2012, 1)
-    assert tripleCrown=BattingStat.new.find_max_batting_avg_by_year_and_league(2012, 1)
-    
+    assert_equal 2, BattingStat.new.find_max_batting_avg_by_year_and_league(2012, 1), 'Retrieve the player_id with max batting average'
+  
   end
   
   test 'gets batter with most home runs by year and league' do
-
-        player_with_most_home_runs = BattingStat.new.find_max_home_runs_by_year_and_league(2012,1)
-        assert triplecrown=BattingStat.new.find_max_home_runs_by_year_and_league(2012,1)
+         assert_equal 2,BattingStat.new.find_max_home_runs_by_year_and_league(2012,1), 'Retrieve player_id with most home runs'
   end
   
   test 'gets batter with most runs battted in' do
-
-    player_with_most_runs_batted_in = BattingStat.new.find_max_runs_batted_by_year_and_league(2012,1)
-    
-    assert triplecrown=BattingStat.new.find_max_runs_batted_by_year_and_league(2012,1)
+    assert_equal 2, BattingStat.new.find_max_runs_batted_by_year_and_league(2012,1), 'Retrive player_id with most runs batted in'
     
   end
   
   test 'gets triple crown winner' do
-
-    triple_crown_winner = BattingStat.new.find_triple_crown_player_by_year_and_league(2012,1)
-
-    assert triplecrown=BattingStat.new.find_triple_crown_player_by_year_and_league(2012,1)
+    assert_equal 2, BattingStat.new.find_triple_crown_player_by_year_and_league(2012,1).player_id, 'Retrieve the triple crown winner\'s record'
 
   end
   
  test 'get prior year and next year batting stats' do
-   puts 'past year'
-   two_rows = BattingStat.new.find_prior_year_and_next_year(2012, 2)
-   
-   puts 'difference ' + two_rows.to_s
+   assert BattingStat.new.update_batting_average_difference(2012, 2), 'Update batting average difference'
  end 
  
- test 'get players with batting data for year x' do
-   puts 'find players with data in range'
-   puts BattingStat.new.find_players_with_batting_data_by_year(2012).to_yaml
-   
+ test 'get players with batting data for year  2012' do
+   assert_equal 2,BattingStat.new.find_players_with_batting_data_by_year(2012).count, 'Get the number of players with batting data for a specific year'
  end
  
  test 'get changes in prior year' do
-   puts 'Getting changes piro  xxxxxxxxxxxxxxxxxxxxxxxx'
    batting_year = 2012
-    BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
-      puts 'change since previous year >>>>>>>> ' + bs.player_id.to_s + ' ' + BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id).to_s
-    end 
-     puts 'Getting changes piro end  xxxxxxxxxxxxxxxxxxxxxxxx'
-  
+   players=BattingStat.new.find_players_with_batting_data_by_year(batting_year)
+   assert_equal 2, players.count
+   players.each do |bs|
+      assert BattingStat.new.update_batting_average_difference(batting_year, bs.player_id).to_s, 'Update batting average differnce for each player'
+   end 
+    
  end
- 
- #2,2012
- 
+
  test 'get team stats for slugging percentage for the  year' do
    team_id = 2
    batting_year = 2012
-   puts '+++++++++++ getting slug pct for team ++++++++'
-   BattingStat.new.get_sum_team_batting_stats(team_id, batting_year).to_yaml
-    puts '+++++++++++ getting slug pct for team ++++++++'
+   battingstats= BattingStat.new.get_sum_team_batting_stats(team_id, batting_year)
+   assert_equal 2,battingstats.league_id, 'league_id =2'
+   assert_equal 2, battingstats.team_id, 'team_id = 2'
+   assert_equal 2012,battingstats.batting_year, 'Summed batting stats - batting year=2012'
+   assert_equal '8',battingstats.sum_hits, 'Summed batting stats - hits'
+   assert_equal '1',battingstats.sum_doubles, 'Summed batting stats - doubles'
+   assert_equal '0',battingstats.sum_triples, 'Summed batting stats - triples'
+   assert_equal '0',battingstats.sum_home_runs, 'Summed batting stats - home runs'
+   assert_equal '70',battingstats.sum_at_bats, 'Summeed batting stats - at bats'
  end 
 end

@@ -5,10 +5,8 @@ class PlayerMailerControlerTest <ActiveSupport::TestCase
     @user=User.first
   end
   
+test 'should notify player of award (mocks)' do
   
-  
-test 'should ' do
-
   player=Player.find(1)
   award=PlayerAward.find(1) 
   pMailer=PlayerMailer.send :new
@@ -17,24 +15,18 @@ test 'should ' do
   
 end
 
-  
-test 'should do ' do
-
+test 'should notify player of an awards (stubs)' do
   player=Player.find(1)
   award=PlayerAward.find(1) 
   PlayerMailer.stubs(:notify_award).returns(true)
-
   assert_equal true, PlayerMailer.notify_award(:player,:award), 'Checking triple crown mock'
   
 end
-test 'shouldreal  do ' do
-  
+
+test 'should notify do ' do
   player=Player.find(1)
   award=PlayerAward.find(1) 
   PlayerMailer.notify_award(player,award)
-
-  #assert_equal true, PlayerMailer.notify_award(:player,:award), 'Checking triple crown mock'
-  
 end
 
 

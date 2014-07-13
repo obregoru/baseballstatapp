@@ -13,40 +13,41 @@ class TeamTest < ActiveSupport::TestCase
   should_not allow_mass_assignment_of(:updated_at)
   
   
-  test 'team must have a team name' do
+  test 'Team must have a team name' do
     team=Team.new
-    refute team.save, 'saved the team'
+    assert !team.save, 'Saving the team without a team name'
   end
   
-  test 'team saves with a team name and league id' do
+  test 'Team saves with a team name and league id' do
     team=Team.new
     team.league_id=1
     team.team_name='Dodgers'
-    assert team.save, 'saved the team with a team name'
+    assert team.save, 'Save the team with a team name'
   end
   
   
-  test 'update Teams' do
+  test 'Update Teams' do
     team=Team.find(2)
     team.team_name = 'Reds'
-    assert team.save, 'Updated team name to Reds'
+    assert team.save, 'Update team name to Reds'
   end
   
-  test 'destroy Team' do
+  test 'Destroy Team' do
     team=Team.find(2)
-    assert team.destroy
-    assert_equal 1, Team.count, 'Destroyed team 2'
+    assert team.destroy, 'Destroy team 2'
+    assert !Team.exists?(2), 'Check if team 2 still exists'
+    assert_equal 1, Team.count, 'Verify team count'
   end
   
-  test 'update notes' do
+  test 'update notes with team slugging percenatge' do
     year=2012
     team_id=2
     team_slugging_percentage=BattingStat.new.get_sum_team_batting_stats(team_id, year)
-    assert team_slugging_percentage
+    assert team_slugging_percentage, 'Got the slugging percentage'
     if !(team_slugging_percentage.nil?)
       team=Team.find(team_id)
       team.notes= 'Team slugging percentage ' + team_slugging_percentage.to_s
-      refute team.save
+      assert team.save,  'Save the team record with the updated notes field'
     end
   end
 end
