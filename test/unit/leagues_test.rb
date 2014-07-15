@@ -26,15 +26,15 @@ class LeagueTest< ActiveSupport::TestCase
   end
   
   test 'update League' do
-    league=League.find(1)
+    league=leagues(:al)
     league.league_name = 'International League'
     assert league.save, 'Update the league name to International League'
   end
   
   test 'Destroy league record 1' do
-    league=League.find(1)
+    league=leagues(:al)
     assert league.destroy, 'Delete the league record with id of 1'
-    assert !League.exists?(1), 'Check if league still exists'   
+    assert !League.exists?(league.id), 'Check if league still exists'   
     assert_equal 1, League.count, 'Verify new league count'
   end
   

@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class PlayerTest<ActiveSupport::TestCase
+  fixtures :players
   
   should belong_to(:team)
   should have_many(:batting_stats)
@@ -35,24 +36,21 @@ class PlayerTest<ActiveSupport::TestCase
   end
   
   test 'update player' do
-    player=Player.find(2)
+    player=players(:BobbyAbreu)
     player.first_name = 'Bob'
     assert player.save, 'Update Player first name to Bob'
   end
   
   test 'destroy player' do
-    player=Player.find(1)
+    player=players(:HomerBailey)
     assert player.destroy, 'Destroy Player'
-    assert !Player.exists?(1), 'Player destroyed'
+    assert !Player.exists?(player.id), 'Player destroyed'
     assert_equal 1, Player.count, 'Player count reflects destroy'
   end
   
   test 'player first and last name are returned' do
-    #todo
-    #find record, manually create first and last name, and compare
-    assert player=Player.find(1).first_and_last_name, 'Return first and last name'
-    
-    
+    player=players(:HomerBailey)
+    assert_equal 'Homer Bailey', player=players(:HomerBailey).first_and_last_name, 'Returns first and last name'
   end
   
 end

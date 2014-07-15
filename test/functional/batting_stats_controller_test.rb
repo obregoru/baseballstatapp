@@ -6,8 +6,8 @@ fixtures :users
   def setup
     assert @battingstat=BattingStat.new,'Setup'
     @batting_stat=batting_stats(:BobbyAbreu)
-    @user = User.find(1)
-    @league = League.find(1)
+    @user = users(:Ruben)
+    @league = leagues(:al)
   end
   
   def teardown

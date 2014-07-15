@@ -2,6 +2,7 @@ require 'test_helper'
 
 class PlayerAwardTest< ActiveSupport::TestCase
   
+  
 should belong_to :league
 should belong_to :player
 
@@ -46,16 +47,16 @@ test "should not save PlayerAward with a non-numeric award year"  do
 end 
 
 test 'upadate PlayerAward' do
-  player_award=PlayerAward.find(1)
+  player_award=player_awards(:GoldenBall)
   player_award.award_name='Updated Award'
   player_award.award_year=1999
   assert player_award.save!, 'Update PlayerAward award name and award year'
 end
 
 test 'destroy PlayerAward' do
-  player_award=PlayerAward.find(1)
-  assert player_award.destroy, 'Destroy PlayerAward with ID of 1'
-  assert !PlayerAward.exists?(1), 'Check if Player Award 1 still exists'
+  player_award=player_awards(:GoldenBall) 
+  assert player_award.destroy, 'Destroy PlayerAward with id of 1'
+  assert !PlayerAward.exists?(player_award.id), 'Check if Player Award 1 still exists'
   assert_equal 0, PlayerAward.count , 'Verify PlayerAward count'
 end
 

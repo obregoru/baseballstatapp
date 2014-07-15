@@ -28,7 +28,13 @@ include Devise::TestHelpers
     DatabaseCleaner.clean      
    
   end
+  
+  
 end
 class ActionDispatch::IntegrationTest
   include Capybara::DSL
 end
+
+
+
+

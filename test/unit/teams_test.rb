@@ -27,27 +27,17 @@ class TeamTest < ActiveSupport::TestCase
   
   
   test 'Update Teams' do
-    team=Team.find(2)
+    team=teams(:CincinnatiReds)
     team.team_name = 'Reds'
     assert team.save, 'Update team name to Reds'
   end
   
   test 'Destroy Team' do
-    team=Team.find(2)
-    assert team.destroy, 'Destroy team 2'
-    assert !Team.exists?(2), 'Check if team 2 still exists'
+    team=teams(:CincinnatiReds)
+    assert team.destroy, 'Destroy team CincinnatiReds (team 2)'
+    assert !Team.exists?(team.id), 'Check if team 2 still exists'
     assert_equal 1, Team.count, 'Verify team count'
   end
   
-  test 'update notes with team slugging percenatge' do
-    year=2012
-    team_id=2
-    team_slugging_percentage=BattingStat.new.get_sum_team_batting_stats(team_id, year)
-    assert team_slugging_percentage, 'Got the slugging percentage'
-    if !(team_slugging_percentage.nil?)
-      team=Team.find(team_id)
-      team.notes= 'Team slugging percentage ' + team_slugging_percentage.to_s
-      assert team.save,  'Save the team record with the updated notes field'
-    end
-  end
+ 
 end

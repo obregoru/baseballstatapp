@@ -4,7 +4,7 @@ require_relative '../../lib/BaseballStats.rb'
 include BaseballStats
 class BaseballStats_test < ActiveSupport::TestCase
   # Replace this with your real tests.
-  test "Getting batting average" do
+  test "get batting average" do
     assert_equal 0.2,battingAverage(1, 5), 'Batting stats were correct'
   end
   
@@ -12,7 +12,7 @@ class BaseballStats_test < ActiveSupport::TestCase
     assert_nil battingAverage(1,0), 'Divide by zero'
   end 
   
-  test "Calc slugging percentage" do
+  test "calc slugging percentage" do
     #todo assert equal
     assert sluggingPercentage(10, 3,2,1, 20), 'Calculated slugging percentage'
     

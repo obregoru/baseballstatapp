@@ -6,7 +6,7 @@ class PlayersControllerTest< ActionController::TestCase
     assert @player=Player.new, 'Setup'
     @player=players(:HomerBailey)
     FactoryGirl.reload
-    @user=User.first
+    @user=users(:Ruben)
   end
   
   def teardown

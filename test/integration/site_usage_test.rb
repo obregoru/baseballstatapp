@@ -1,24 +1,27 @@
 require 'test_helper'
 
 class SiteUsageTest < ActionDispatch::IntegrationTest
-  #initial tests
-  include Warden::Test::Helpers
+
+  # test unauthenticated user and authenticated user
+
   fixtures :users
   
-  def startup
-    @user = User.first
-  end
+
   
   def sign_in_user
     #DRY - code this once
     #not all tests use authentication 
     #need to ensure actions are only by authenticated users
+    
     visit('/users/sign_in')
-    fill_in('user[email]',:with=>"ruben.obregon@gmail.com")
-    fill_in('user[password]',:with=>'dar3m3911')
+    fill_in('user[email]',:with=>users(:Ruben).email)
+    fill_in('user[password]',:with=>'rubyonrails')
     click_on('Sign in')
+  
+  
   end
   
+  #test unauthenticated user flow first ----------------------
   should 'visit home page' do
     visit('/')
   end
@@ -51,9 +54,66 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
     click_link('Player Awards')
     assert page.has_content?('Listing Player Awards')
   end
- 
-  #create league
-  test 'create league' do
+  
+  
+  test 'Sign in, create a league, create a team, create a player' do
+    
+    sign_in_user
+    
+    assert_difference('League.count', 1) do
+      visit('/leagues')
+      click_link('New League')
+      assert page.has_content?('New League')
+      fill_in('League name', :with => 'Rails League')
+      click_on('Create League')
+      assert page.has_content?('League was successfully created.')
+    end 
+      assert_difference('Team.count', 1) do
+        visit('/teams')
+        click_link('New Team')
+        assert page.has_content?('New Team')
+        select('Rails League', :from =>'team[league_id]')
+        fill_in('Team name', :with => 'OOPland Railers')
+        click_on('Create Team')
+        assert page.has_content?('Team was successfully created.')
+      end
+      
+      assert_difference('Player.count', 1) do
+        visit('/players')
+        click_link('New Player')
+        assert page.has_content?('New Player')
+        select('OOPland Railers', :from =>'player[team_id]')
+        fill_in('First name', :with => 'Ruby')
+        fill_in('Last name', :with => 'Rails')
+        click_on('Create Player')
+        assert page.has_content?('Player was successfully created.')
+      end   
+      assert_difference('BattingStat.count', 1) do
+        visit('/batting_stats')
+        click_link('New Batting stat')
+        assert page.has_content?('New Batting Stat')
+        select('Ruby Rails', :from =>'batting_stat[player_id]')
+        select('Rails League', :from =>'batting_stat[league_id]')
+        select('OOPland Railers', :from =>'batting_stat[team_id]')
+        fill_in('Batting year', :with => '2014')
+        fill_in('At bats', :with => 100)
+        fill_in('Hits', :with=>80)
+        fill_in('Doubles', :with=>70)
+        fill_in('Triples', :with=>60)
+        fill_in('Home runs', :with=>50)
+        fill_in('Runs batted', :with=>40)
+        fill_in('Batting average',  :with=>BaseballStats.battingAverage(80, 100))
+        fill_in('Slugging percentage', :with =>BaseballStats.sluggingPercentage(80, 70, 60, 50, 100))
+        click_on('Create Batting stat')
+        assert page.has_content?('Batting stat was successfully created.')
+      end   
+      
+    click_link("Sign out")
+  end
+  
+  # authenticated user tests
+
+  test 'Sign in, create league' do
     sign_in_user
     assert_difference('League.count', 1) do
       visit('/leagues')
@@ -61,10 +121,11 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
       assert page.has_content?('New League')
       fill_in('League name', :with => 'Rails League')
       click_on('Create League')
-      click_link("Sign out")
     end
+    click_link("Sign out")
   end
-    test 'create team' do
+  
+  test 'create team' do
       sign_in_user
       assert_difference('Team.count', 1) do
         visit('/teams')
@@ -75,8 +136,9 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         click_on('Create Team')
       end
       click_link("Sign out")
-    end
-    test 'create player' do
+  end
+    
+  test 'create player' do
       sign_in_user
       assert_difference('Player.count', 1) do
         visit('/players')
@@ -88,7 +150,8 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         click_on('Create Player')
       end   
       click_link("Sign out")
-    end 
+  end 
+  
     test 'create batting stats' do
       sign_in_user
       assert_difference('BattingStat.count', 1) do
@@ -111,6 +174,7 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
       end   
       click_link("Sign out")
     end     
+    
     test 'create player award' do
      sign_in_user
       assert_difference('PlayerAward.count', 1) do

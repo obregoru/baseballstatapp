@@ -6,7 +6,7 @@ class PlayerAwardsControllerTest<ActionController::TestCase
   def setup
     assert @player_award=PlayerAward.new, 'setup'
     @player_award = player_awards(:GoldenBall)
-    @user = User.first
+    @user = users(:Ruben)
   end
   
   test 'should get index' do

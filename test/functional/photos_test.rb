@@ -4,7 +4,7 @@ class PhotosControllerTest <ActionController::TestCase
   def setup
     assert @photo=Photo.new, 'Setup'
     @photo=photos(:NewYorkYankees)
-     @user = User.first
+    @user = users(:Ruben)  #User.first
   end
   
   def teardown

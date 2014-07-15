@@ -27,15 +27,15 @@ class PhotoTest < ActiveSupport::TestCase
   end
   
   test 'update photo' do
-    photo=Photo.find(2)
+    photo=photos(:BobbyAbreu)
     photo.photo_name = 'Bobby'
     assert photo.save, 'Update photo name to Bobby'
   end
   
   test 'destroy photo' do
-    photo=Photo.find(1)
+    photo=photos(:NewYorkYankees)
     assert photo.destroy, 'Destroy record 1'
-    assert !Photo.exists?(1), 'Check if photo 1 still exists after destroy'
+    assert !Photo.exists?(photo.id), 'Check if photo 1 still exists after destroy'
     assert_equal 3, Photo.count, 'Record is destroyed'
   end
   

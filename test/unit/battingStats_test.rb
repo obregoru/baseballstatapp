@@ -11,7 +11,7 @@ class BattingStatTest < ActiveSupport::TestCase
   should validate_presence_of(:team_id)
   should validate_presence_of(:league_id)
   
-  test "save a battingStat record" do
+  test "s ave a battingStat record" do
     battingstat=BattingStat.new
     battingstat.player_id=1
     battingstat.league_id=1
@@ -20,34 +20,34 @@ class BattingStatTest < ActiveSupport::TestCase
   end 
   
   test 'update Batting Stats' do
-    batstats=BattingStat.find(2)
+    batstats=batting_stats(:HomerBailey)
     batstats.hits = 9
-    assert batstats.save!, 'Updated batting stats for player 2'
+    assert batstats.save!, 'Updated batting stats for player HomerBailey (2)'
   end
 
-  test 'destroy batting stats' do
-    batstats=BattingStat.find(1)
+  test 'destroy batting stats record' do
+    batstats=batting_stats(:BobbyAbreu)
     assert batstats.destroy, 'Destory batting stat record'
-    assert !BattingStat.exists?(1), 'Batting stat does not exist'
+    assert !BattingStat.exists?(batstats.id), 'Batting stat does not exist'
     assert_equal 2, BattingStat.count, 'Verify batting stat count is 2'
   end
 
   
-  test 'gets batter with max batting average by year and league' do
+  test 'get batter with max batting average by year and league' do
     assert_equal 2, BattingStat.new.find_max_batting_avg_by_year_and_league(2012, 1), 'Retrieve the player_id with max batting average'
   
   end
   
-  test 'gets batter with most home runs by year and league' do
+  test 'get batter with most home runs by year and league' do
          assert_equal 2,BattingStat.new.find_max_home_runs_by_year_and_league(2012,1), 'Retrieve player_id with most home runs'
   end
   
-  test 'gets batter with most runs battted in' do
+  test 'get batter with most runs battted in' do
     assert_equal 2, BattingStat.new.find_max_runs_batted_by_year_and_league(2012,1), 'Retrive player_id with most runs batted in'
     
   end
   
-  test 'gets triple crown winner' do
+  test 'get triple crown winner' do
     assert_equal 2, BattingStat.new.find_triple_crown_player_by_year_and_league(2012,1).player_id, 'Retrieve the triple crown winner\'s record'
 
   end
