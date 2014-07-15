@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Driven Development Example</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="/assets/application.css"> 
+</head>
+<body>
+<div class="wrapper">
+<div class="top_banner" >
+<span class="top_banner_logo" ><img src='/assets/logo-tdd.png'></span><span class="menu_nav"><a href="leagues">Leagues</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="teams">Teams</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="players">Players</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="batting_stats">Batting Stats</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="player_awards">Player Awards</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	<a href="photos">Photos</a>&nbsp;&nbsp;</span>
+</div>
+<div style="clear:both;">
+<div class="site_description">
+<h1>Test Driven Development Example</h1>
+<p>The purpose of the site is to demonstrate my TDD skills - this site was developed using the "test first, code later" concept. It's not a full blown app - rather it's just a sample<p>
+
+<p>This app uses Rails 3.2.13, Ruby 1.9.3, and Postgres for the backend. It's hosted on Heroku, and was developed using Test-Unit, Shoulda, Mocha, fixtures, Factory Girl, Git, and Capybara. (Yes I can do Rails 4, Rspec etc..) 
+	
+<p>It uses Devise for authentication - if you have the username and password, you can edit, delete, add etc - otherwise you can just view the data.</p>
+ 
+
+<p>And finally, this app is responsive - use your phone or tablet to view, or simply resize your browser.</p>
+</div>
+<div class = "right_image" >
+<img src= '/assets/baseballlogo.gif'>
+</div>
+</div>
+<div style="clear:both;" class="challenge">
+<h2>An example of my Ruby on Rails skills</h2>
+
+<p>As part of an interview process, I was given the challenge below.</p>
+
+<p>While unltimatley I decided against applying for the position, I thought I would use the challenge loosely as a basis to showcase my TDD and Rails skills.</p>
+
+<p>The solution could have been written in Ruby alone, but I decided to create a Ruby on Rails app to give you an idea of what I can do. I also decided to focus on a database solution instead of using the provided csv files.</p>
+
+<p>As explained above, I used TDD to develop this app. </p>
+
+<h2>The Challenge</h2>
+
+ 
+<p>Given batting stat and player files (CSV), write an application that will analyze the data and provide:
+	
+<p>1) Most improved batting average( hits / at-bats) from 2009 to 2010.  Only include players with at least 200 at-bats.</p>
+
+<p>2) Slugging percentage for all players on the Oakland A's in 2007. </p>
+
+<p>3) Who was the AL and NL triple crown winner for 2011 and 2012. (If any..)</p>
+
+<p>Approach this problem as if it is an application going to production.  We don't expect it to be perfect (no production code is), but we also don't want you to hack together a throw-away script.  This should be representative of something that you would be comfortable releasing to a production environment.  Also, spend whatever amount of time you think is reasonable.  If you don't get all the requirements completed, that's ok.  Just do the best you can with the time that you have available.  You may use whatever gems, frameworks and tools that you think are appropriate, just provide any special setup instructions when you submit your solution.</p>
+
+<b>Formulas:</b><br/>
+<b>Batting average</b> = hits / at-bats<br/>
+<b>Slugging percentage</b> = ((Hits - doubles - triples - home runs) + (2 * doubles) + (3 * triples) + (4 * home runs)) / at-bats<br/>
+<b>Triple crown winner</b> - The player that had the highest batting average AND the most home runs AND the most RBI in their league. It's unusual for someone to win this, but there was a winner in 2012. "Officially" the batting title (highest league batting average) is based on a minimum of 502 plate appearances. The provided dataset does not include plate appearances. It also does not include walks so plate appearances cannot be calculated. Instead, use a constraint of a minimum of 400 at-bats to determine those eligible for the league batting title.<br/>
+
+<p>Data:  All the necessary data is available in the two csv files attached:</p>
+
+</p>Batting-07-12.csv - Contains all the batting statistics from 2007-2012.</p>
+
+<p>Column header key:<br/>
+AB - at-bats</br>
+H - hits</br>
+2B - doubles</br>
+3B - triples</br>
+HR - home runs</br>
+RBI - runs batted in</p>
+
+<p>Master-small.csv - Contains the demographic data for all baseball players in history through 2012.</p>
+
+<p>Please note: We are looking for you to demonstrate you knowledge related to common software practices to include reusability, portability, and encapsulation - to name a few. Work submitted should be in project form and implemented as you were implementing any production solution.</p>
+
+</div>
+</body>
+</html>

@@ -11,7 +11,7 @@ class UserControllerTest < ActionController::TestCase
   end
 
   test 'login as a user' do
-    #login_as(:Ruben)
+
     sign_in @user
 
   end

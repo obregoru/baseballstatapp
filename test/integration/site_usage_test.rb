@@ -68,6 +68,7 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
       click_on('Create League')
       assert page.has_content?('League was successfully created.')
     end 
+    
       assert_difference('Team.count', 1) do
         visit('/teams')
         click_link('New Team')
@@ -105,7 +106,7 @@ class SiteUsageTest < ActionDispatch::IntegrationTest
         fill_in('Batting average',  :with=>BaseballStats.battingAverage(80, 100))
         fill_in('Slugging percentage', :with =>BaseballStats.sluggingPercentage(80, 70, 60, 50, 100))
         click_on('Create Batting stat')
-        assert page.has_content?('Batting stat was successfully created.')
+        assert page.has_content?('Batting stat was successfully created.  ')
       end   
       
     click_link("Sign out")

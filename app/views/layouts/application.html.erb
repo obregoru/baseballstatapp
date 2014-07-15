@@ -13,7 +13,7 @@
 <div class="wrapper">
 	
 <div class="top_banner">
-	<div id="user_nav" style="float:right;">
+	<div class="menu_nav" style="float:right;">
 	  <% if user_signed_in? %>
 	    Signed in as <%= current_user.email %>. Not you?
 	    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
@@ -21,12 +21,14 @@
 	    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
 	  <% end %>
 	</div>
+<div>
 <span class="top_banner_logo" ><%= link_to(image_tag('logo-tdd.png', :alt=>'Rails & TDD',:title=>"Click here to return home"), "/")%></span><span class="menu_nav"><%= link_to "Leagues", leagues_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Teams", teams_path%>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Players", players_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Batting Stats", batting_stats_path %>&nbsp;&nbsp;|&nbsp;&nbsp;
 	<%= link_to "Player Awards", player_awards_path%>&nbsp;&nbsp;|&nbsp;&nbsp;
-	<%= link_to "Photos", photos_path%>&nbsp;&nbsp;</span>
+	<%= link_to "Photos", photos_path%>&nbsp;&nbsp;<br/></br></span>
+</div>
 </div>
 <div>
 <div class="the_content">

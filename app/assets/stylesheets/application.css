@@ -23,12 +23,14 @@ width:100%;
 }
 
 .menu_nav {
-
-
+	color:#ffeeee;
+	display:block;
+	text-align:center;
 }
 
 .challenge{
 	padding: 10px;
+	margin:10px;
 }
 
 .stats{

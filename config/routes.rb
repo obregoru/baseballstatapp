@@ -1,5 +1,7 @@
 Tdd1::Application.routes.draw do
    
+  get "welcome/index"
+
   devise_for :users
 
   match 'create_awards' => 'player_awards#create_awards', :via => :get
@@ -81,7 +83,7 @@ Tdd1::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-root :to => 'leagues#index'
+root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
