@@ -17,7 +17,7 @@ class PlayerAwardsController < ApplicationController
     # update players batting average differences
     batting_year = 2010
      BattingStat.new.find_players_with_batting_data_by_year(batting_year).each do |bs|
-       BattingStat.new.find_prior_year_and_next_year(batting_year, bs.player_id)
+       BattingStat.new.update_batting_average_difference(batting_year, bs.player_id)
      end  
     
     #most imporoved award
