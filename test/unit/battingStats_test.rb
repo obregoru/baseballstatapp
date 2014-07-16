@@ -11,12 +11,12 @@ class BattingStatTest < ActiveSupport::TestCase
   should validate_presence_of(:team_id)
   should validate_presence_of(:league_id)
   
-  test "s ave a battingStat record" do
+  test "save a battingStat record" do
     battingstat=BattingStat.new
     battingstat.player_id=1
     battingstat.league_id=1
     battingstat.team_id=2
-    assert battingstat.save
+    assert battingstat.save, 'Save the batting stat'
   end 
   
   test 'update Batting Stats' do

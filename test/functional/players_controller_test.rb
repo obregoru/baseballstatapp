@@ -5,7 +5,6 @@ class PlayersControllerTest< ActionController::TestCase
   def setup
     assert @player=Player.new, 'Setup'
     @player=players(:HomerBailey)
-    FactoryGirl.reload
     @user=users(:Ruben)
   end
   

@@ -41,7 +41,7 @@ test 'find Triple Crown winner and create award - mock' do
   assert triple_crown_award.save!, 'saving triple crown award'
 end
 
-test 'find Triple Crown winner, create award, notify player' do
+test 'find Triple Crown winner, create award, notify player - mock and stup' do
   battingstat=batting_stats(:TripleCrown)
   
   BattingStat.expects(:find_triple_crown_player_by_year_and_league).with(2012,1).returns(battingstat)

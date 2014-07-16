@@ -27,7 +27,7 @@ class PlayerTest<ActiveSupport::TestCase
     player.team_id=1
     player.first_name='Bo'
     player.last_name='Jackson'
-    assert player.save, 'Save a player with a first and last name'
+    assert player.save, 'Save the player'
   end
   
   test "find player by last name" do

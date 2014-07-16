@@ -44,7 +44,7 @@ class UserTest < ActiveSupport::TestCase
   end
   
   test 'Should update user with a valid e-mail address' do
-    user = users(:Ruben)#User.find(1)
+    user = users(:Ruben)
     user.email='validaddress@gmail.com'
     assert user.save, 'Update user with valid address'
   end
